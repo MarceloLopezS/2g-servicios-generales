@@ -1,13 +1,162 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif&display=swap');
+
+:root {
+    --clr-primary-300: hsl(212, 47%, 50%);
+    --clr-primary-400: hsl(212, 47%, 38%);
+
+    --clr-accent-100: hsl(0, 0%, 83%);
+    --clr-accent-400: hsl(16, 72%, 51%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-900: hsl(0, 0%, 0%);
+
+    --ff-primary: 'Noto Sans', sans-serif;
+    --ff-secondary: 'Noto Serif', serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-200: 1rem;
+    --fs-250: 1.125rem;
+    --fs-300: 1.25rem;
+    --fs-350: 1.375rem;
+    --fs-400: 1.625rem;
+    --fs-500: 2rem;
+    --fs-600: 2.6rem;
+    --fs-650: 3.125rem;
+    --fs-700: 3.75rem;
+    --fs-800: 5.5rem;
+    --fs-900: 7.5rem;
+    --fs-950: 10rem;
+
+    --fs-body: var(--fs-300);
+    --fs-nav-links: var(--fs-400);
+    --fs-banner-title: var(--fs-800);
+    --fs-section-title: var(--fs-800);
+    --fs-project-title: var(--fs-600);
+    --fs-cta-title: var(--fs-650);
+    --fs-btn: var(--fs-200);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 60em) {
+    :root {
+        --fs-nav-links: var(--fs-350);
+        --fs-banner-title: var(--fs-950);
+        --fs-section-title: var(--fs-900);
+        --fs-cta-title: var(--fs-700);
+        --fs-btn: var(--fs-250);
+    }
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+.text-primary-400 {
+    color: var(--clr-primary-400);
+}
+.text-primary-300 {
+    color: var(--clr-primary-300);
+}
+.text-accent-400 {
+    color: var(--clr-accent-400);
+}
+.text-neutral-100 {
+    color: var(--clr-neutral-100);
+}
+.text-neutral-900 {
+    color: var(--clr-neutral-900);
+}
+
+.ff-primary {
+    font-family: var(--ff-primary);
+}
+.ff-secondary {
+    font-family: var(--ff-secondary);
+}
+
+.fw-regular {
+    font-weight: 400;
+}
+.fw-bold {
+    font-weight: 700;
+}
+
+.fs-banner-title {
+    font-size: var(--fs-banner-title);
+}
+.fs-section-title {
+    font-size: var(--fs-section-title);
+}
+.fs-project-title {
+    font-size: var(--fs-project-title);
+}
+.fs-cta-title {
+    font-size: var(--fs-cta-title);
+}
+.fs-secondary-title {
+    font-size: var(--fs-600);
+}
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.bg-primary-400 {
+    background-color: var(--clr-primary-400);
+}
+.bg-accent-100 {
+    background-color: var(--clr-accent-100);
+}
+.bg-accent-400 {
+    background-color: var(--clr-accent-400);
 }

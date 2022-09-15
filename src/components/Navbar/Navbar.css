@@ -15,8 +15,7 @@
 }
 
 .brand img{
-    width: 6em;
-    aspect-ratio: 1;
+    width: 5.7rem;
 }
 
 #mobile-menu-toggle {
@@ -26,12 +25,12 @@
 .nav-icon {
     display: none;
     color: inherit;
-    width: 2em;
+    width: 1.9rem;
 }
 
 .nav-links {
     display: flex;
-    gap: var(--size-100);
+    gap: var(--size-125);
 }
 
 .nav-links li {
@@ -56,7 +55,7 @@
     }
 
     .brand img{
-        width: 4.3em;
+        width: 4.125rem;
         aspect-ratio: 1;
     }
 

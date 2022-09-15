@@ -2,33 +2,40 @@ import React from 'react';
 import './Navbar.css';
 import logoPath from '../../assets/images/logo.jpg';
 
-const Navbar = () => {
+const Navbar = ({ menuToggle }) => {
     return (
-        <nav className="navbar">
-            <a className="logo">
-                <img src={logoPath} alt="2G Logo"></img>
-            </a>
-            <button className='btn'></button>
-            <ul className='nav-links'>
-                <li>
-                    <a href='#'>Inicio</a>
-                </li>
-                <li>
-                    <a href='#'>Nosotros</a>
-                </li>
-                <li>
-                    <a href='#'>Servicios</a>
-                </li>
-                <li>
-                    <a href='#'>Política de Calidad</a>
-                </li>
-                <li>
-                    <a href='#'>Proyectos</a>
-                </li>
-                <li>
-                    <a href='#'>Contáctenos</a>
-                </li>
-            </ul>
+        <nav className='navbar'>
+            <div className='container nav-container'>
+                <a className='brand'>
+                    <img src={logoPath} alt='2G Logo'></img>
+                </a>
+                <button id='mobile-menu-toggle' aria-controls='nav-primary-links' onClick={menuToggle}>
+                    <svg className='nav-icon' id='nav-drop' data-visible xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    <svg className='nav-icon' id='nav-close' xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    <span className='visually-hidden'>Menu</span>
+                </button>
+                <ul id='nav-primary-links' className='nav-links' role='list' aria-label='Primary navigation'>
+                    <li>
+                        <a href='#'>Nosotros</a>
+                    </li>
+                    <li>
+                        <a href='#'>Servicios</a>
+                    </li>
+                    <li>
+                        <a href='#'>Política de Calidad</a>
+                    </li>
+                    <li>
+                        <a href='#'>Proyectos</a>
+                    </li>
+                    <li>
+                        <a href='#'>Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     )
 }

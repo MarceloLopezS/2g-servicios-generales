@@ -21,7 +21,7 @@
     width: 5.7rem;
 }
 
-#mobile-menu-toggle {
+.mobile-menu-toggle {
     display: none;
 }
 
@@ -66,7 +66,7 @@
         background-color: inherit;
     }
     
-    #mobile-menu-toggle {
+    .mobile-menu-toggle {
         display: block;
         color: inherit;
         background-color: transparent;

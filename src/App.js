@@ -7,6 +7,9 @@ class App extends Component {
         const navDropIcon = document.querySelector('#nav-drop');
         const navCloseIcon = document.querySelector('#nav-close');
 
+        navLinks.getAttribute('aria-expanded') === 'true' 
+        ? navLinks.setAttribute('aria-expanded', 'false')
+        : navLinks.setAttribute('aria-expanded', 'true')
         navCloseIcon.toggleAttribute('data-visible');
         navDropIcon.toggleAttribute('data-visible');
         navLinks.toggleAttribute('data-expanded');

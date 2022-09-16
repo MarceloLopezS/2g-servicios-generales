@@ -39,7 +39,9 @@
     --fs-cta-title: var(--fs-650);
     --fs-btn: var(--fs-200);
 
-    --size-50: 0.75rem;
+    --size-25: 0.75rem;
+    --size-50: 1rem;
+    --size-75: 1.25rem;
     --size-100: 1.5rem;
     --size-125: 1.75rem;
     --size-150: 2rem;

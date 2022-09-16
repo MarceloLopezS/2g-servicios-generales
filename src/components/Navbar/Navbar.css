@@ -4,7 +4,7 @@
     text-transform: uppercase;
     color: var(--clr-neutral-100);
     background-color: var(--clr-primary-400);
-    padding-block: var(--size-50);
+    padding-block: var(--size-25);
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 100;
@@ -85,7 +85,7 @@
         line-height: 1;
         display: grid;
         place-items: center;
-        padding-block: var(--size-150);
+        padding-block: max(2.765vh, var(--size-75));
         border-bottom: 1px solid var(--clr-neutral-200);
     }
 
@@ -93,7 +93,6 @@
         border-top: 1px solid var(--clr-neutral-200);
     }
 
-    
     .nav-icon[data-visible] {
         display: block;
     }

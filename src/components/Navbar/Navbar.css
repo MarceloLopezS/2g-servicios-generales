@@ -1,9 +1,11 @@
 .navbar {
     font-family: var(--ff-primary);
     font-size: var(--fs-100);
+    font-weight: var(--fw-regular);
     text-transform: uppercase;
     color: var(--clr-neutral-100);
-    background-color: var(--clr-primary-400);
+    /* background-color: var(--clr-primary-400); */
+    background-color: transparent;
     padding-block: var(--size-25);
     position: fixed;
     inset: 0 0 auto 0;
@@ -43,13 +45,11 @@
 
 .nav-links li:hover, .nav-links a:focus-visible {
     outline: 0;
-    color: var(--clr-neutral-200);
+    color: var(--clr-accent-100);
 }
 
 .nav-links a {
     font-size: 1em;
-    text-decoration: none;
-    color: inherit;
 }
 
 @media (max-width: 63em) {
@@ -59,7 +59,6 @@
 
     .brand img{
         width: 4.125rem;
-        aspect-ratio: 1;
     }
 
     .nav-container {
@@ -86,11 +85,11 @@
         display: grid;
         place-items: center;
         padding-block: max(2.765vh, var(--size-75));
-        border-bottom: 1px solid var(--clr-neutral-200);
+        border-bottom: 1px solid var(--clr-accent-100);
     }
 
     ul.nav-links li:first-child {
-        border-top: 1px solid var(--clr-neutral-200);
+        border-top: 1px solid var(--clr-accent-100);
     }
 
     .nav-icon[data-visible] {

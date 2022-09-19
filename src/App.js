@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
+import HomeBanner from './components/HomeBanner/HomeBanner';
 
 class App extends Component {
     onMenuToggle() {
@@ -21,8 +22,8 @@ class App extends Component {
                     <Navbar menuToggle={this.onMenuToggle}/>
                 </header>
                 <main>
-                    {/* <HomeBanner />
-                    <AboutUs />
+                    <HomeBanner />
+                    {/* <AboutUs />
                     <Services />
                     <ProjectsGrid />
                     <WhyWorkWithUS />

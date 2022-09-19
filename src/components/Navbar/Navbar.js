@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import logoPath from '../../assets/images/logo.jpg';
+import logoPath from '../../assets/images/logo.png';
 
 const Navbar = ({ menuToggle }) => {
     return (

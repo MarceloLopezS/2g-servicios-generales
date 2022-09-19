@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Enriqueta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta&display=swap');
 
 :root {
-    --clr-primary-300: hsl(212, 47%, 50%);
+    --clr-primary-300: hsl(212, 47%, 45%);
     --clr-primary-400: hsl(212, 47%, 38%);
 
-    --clr-accent-100: hsl(0, 0%, 83%);
-    --clr-accent-400: hsl(16, 72%, 51%);
+    --clr-accent-100: hsl(0, 0%, 80%);
+    --clr-accent-400: hsl(21, 99%, 50%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-neutral-200: hsl(0, 0%, 80%);
     --clr-neutral-900: hsl(0, 0%, 0%);
 
-    --ff-primary: 'BIZ UDPGothic', sans-serif;
+    --clr-bg-opacity-800: hsl(212, 70%, 10%, 0.85);
+
+    --ff-primary: 'Sura', serif;
     --ff-secondary: 'Enriqueta', serif;
 
     --fw-regular: 400;
     --fw-bold: 700;
+    --fw-black: 900;
 
     --fs-100: 0.95rem;
     --fs-200: 1rem;
@@ -27,13 +30,11 @@
     --fs-600: 2.6rem;
     --fs-650: 3.125rem;
     --fs-700: 3.75rem;
-    --fs-800: 5.5rem;
-    --fs-900: 7.5rem;
-    --fs-950: 10rem;
+    --fs-800: 5rem;
 
-    --fs-body: var(--fs-300);
+    --fs-body: var(--fs-250);
     --fs-nav-links: var(--fs-400);
-    --fs-banner-title: var(--fs-800);
+    --fs-banner-title: var(--fs-650);
     --fs-section-title: var(--fs-800);
     --fs-project-title: var(--fs-600);
     --fs-cta-title: var(--fs-650);
@@ -52,13 +53,14 @@
     --size-600: 8.75rem;
     --size-700: 9.7rem;
     --size-800: 10.3rem;
-    --size-900: 11rem;
+    --size-850: 13rem;
+    --size-900: 17rem;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 63em) {
     :root {
         --fs-nav-links: var(--fs-350);
-        --fs-banner-title: var(--fs-950);
+        --fs-banner-title: var(--fs-800);
         --fs-section-title: var(--fs-900);
         --fs-cta-title: var(--fs-700);
         --fs-btn: var(--fs-250);
@@ -94,7 +96,8 @@ body {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    color: inherit;
+    text-decoration: none;
 }
 
 img,
@@ -147,6 +150,9 @@ body {
 }
 .text-primary-300 {
     color: var(--clr-primary-300);
+}
+.text-accent-100 {
+    color: var(--clr-accent-100);
 }
 .text-accent-400 {
     color: var(--clr-accent-400);

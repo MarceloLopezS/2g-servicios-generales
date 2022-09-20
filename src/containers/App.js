@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import HomeBanner from './components/HomeBanner/HomeBanner';
+import Navbar from '../components/Navbar/Navbar';
+import HomeBanner from '../components/HomeBanner/HomeBanner';
 
 class App extends Component {
     onMenuToggle() {

@@ -47,6 +47,7 @@
     --size-125: 1.75rem;
     --size-150: 2rem;
     --size-200: 2.5rem;
+    --size-250: 2.75rem;
     --size-300: 4.7rem;
     --size-400: 6.25rem;
     --size-500: 7.8rem;
@@ -68,6 +69,7 @@
 }
 
 /* CSS Reset */
+
 *,
 *::before,
 *::after {
@@ -120,7 +122,6 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-
 
 /* General styling */
 

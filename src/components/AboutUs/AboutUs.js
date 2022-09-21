@@ -19,16 +19,14 @@ const AboutUs = () => {
                 </p>
                 <button type='button' className='btn' data-bg='primary'>Más sobre nosotros</button>
             </div>
-            <div className='about-us__media'>
-                <div className='about-us__main-picture'>
-                    <div className='text-neutral-100 ff-primary fs-picture-info'>
-                        <p className='fw-regular padding-block-100'>Contratistas Generales</p>
-                        <p className='fw-light'>Diseño y construcción</p>
-                    </div>
+            <div className='about-us__main-picture'>
+                <div className='text-neutral-100 ff-primary fs-picture-info'>
+                    <p className='fw-regular padding-block-100'>Contratistas Generales</p>
+                    <p className='fw-light'>Diseño y construcción</p>
                 </div>
-                <div className='bg-primary-400'>
-                    
-                </div>
+            </div>
+            <div className='about-us__carousel bg-primary-400'>
+                
             </div>
         </section>
     )

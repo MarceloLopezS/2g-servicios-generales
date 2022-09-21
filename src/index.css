@@ -281,17 +281,20 @@ button {
 .padding-block-400 {
     padding-block: var(--size-400);
 }
+.padding-top-200 {
+    padding-top: var(--size-200);
+}
 .padding-top-500 {
-    padding-bottom: var(--size-500);
+    padding-top: var(--size-500);
 }
 .padding-top-600 {
     padding-top: var(--size-600);
 }
 .padding-top-800 {
-    padding-bottom: var(--size-800);
+    padding-top: var(--size-800);
 }
 .padding-top-900 {
-    padding-bottom: var(--size-900);
+    padding-top: var(--size-900);
 }
 .padding-bottom-200 {
     padding-bottom: var(--size-200);

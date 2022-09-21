@@ -18,7 +18,7 @@ const Navbar = ({ menuToggle }) => {
                     </svg>
                     <span className='visually-hidden'>Menu</span>
                 </button>
-                <ul id='navbar__primary-links' className='navbar__links | ff-primary fw-light text-neutral-100' role='list' aria-label='Navegación primaria' aria-expanded='false'>
+                <ul id='navbar__primary-links' className='navbar__links | ff-primary fw-light' role='list' aria-label='Navegación primaria' aria-expanded='false'>
                     <li>
                         <a href='#'>Nosotros</a>
                     </li>

@@ -1,7 +1,5 @@
 .navbar {
-    font-family: var(--ff-primary);
     font-size: var(--fs-250);
-    font-weight: var(--fw-regular);
     text-transform: uppercase;
     color: var(--clr-neutral-100);
     background-color: transparent;
@@ -33,7 +31,6 @@
 }
 
 .navbar__links li {
-    color: inherit;
     cursor: pointer;
 }
 

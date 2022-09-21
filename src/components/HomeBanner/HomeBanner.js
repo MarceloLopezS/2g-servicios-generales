@@ -14,7 +14,7 @@ const HomeBanner = () => {
                     <img src={logoPath} alt='2G Logo'></img>
                 </div>
                 <div className='banner__body'>
-                    <h1 className='text-primary-400'>Seguridad <span className='text-accent-100'>&</span> Calidad</h1>
+                    <h1 className='text-primary-400'>Diseño <span className='text-accent-100'>&</span> Construcción</h1>
                     <p>Somos una empresa con una década de experiencia en materializar los proyectos de nuestros clientes siguiendo los más altos estándares de calidad, seguridad y medio ambiente.</p>
                 </div>
                 <div className='banner__scroll-wraper'>

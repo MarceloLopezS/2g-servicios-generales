@@ -31,17 +31,6 @@
     padding-bottom: 1.5rem;
 }
 
-.banner__body h1{
-    font-size: var(--fs-banner-title);
-    padding-block: var(--size-100);
-}
-
-.banner__body h1, .banner__scroll-wraper span {
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-bold);
-    text-transform: uppercase;
-}
-
 .banner__body p {
     display: inline-block;
     max-width: 70ch;
@@ -51,7 +40,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: var(--size-200);
     gap: var(--size-50);
 }
 

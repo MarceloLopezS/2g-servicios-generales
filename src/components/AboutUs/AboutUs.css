@@ -83,10 +83,11 @@
     .about-us__statistics {
         display: grid;
         grid-template-columns: 7% 7% 7% 50% auto;
-        grid-template-rows: 25% 35% 20% 20%;
+        grid-template-rows: 25% 5% 30% 20% 20%;
         grid-template-areas: 
             ". . . . ."
             ". indicator . percentaje percentaje"
+            ". . . percentaje percentaje"
             ". . . description ."
             ". . . . ."
         ;

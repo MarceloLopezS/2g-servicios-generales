@@ -4,7 +4,7 @@ import './AboutUs.css';
 const AboutUs = () => {
     return (
         <section className='about-us'>
-            <div className='about-us__text container'>
+            <section className='about-us__text container'>
                 <p className='fs-title-phrase highlighted text-neutral-900'>
                     El profesionalismo importa
                 </p>
@@ -18,16 +18,18 @@ const AboutUs = () => {
                     Buscamos la manera de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto.</span> Gracias a nuestro compromiso, experiencia y valores, <span className='highlighted text-accent-400'>2G</span> se caracteriza por la completa satisfacción de sus clientes.
                 </p>
                 <button type='button' className='btn' data-bg='primary'>Más sobre nosotros</button>
-            </div>
-            <div className='about-us__main-picture'>
+            </section>
+            <section className='about-us__main-picture'>
                 <div className='text-neutral-100 ff-primary fs-picture-info'>
                     <p className='fw-regular padding-block-100'>Contratistas Generales</p>
                     <p className='fw-light'>Diseño y construcción</p>
                 </div>
-            </div>
-            <div className='about-us__carousel bg-primary-400'>
-                
-            </div>
+            </section>
+            <section className='about-us__statistics | bg-primary-400'>
+                {/* <Carousel />
+                <Carousel />
+                <Carousel /> */}
+            </section>
         </section>
     )
 }

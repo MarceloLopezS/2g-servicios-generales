@@ -30,7 +30,7 @@
 @media (min-width: 63em) {
     .about-us {
         grid-template-columns: auto max(36.5vw, 30rem);
-        grid-template-rows: repeat(2, min-content);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     .about-us__text {
@@ -79,7 +79,10 @@
         bottom: var(--size-75);
     }
 
-    .about-us__carousel {
+    .about-us__statistics {
+        display: grid;
+        align-items: end;
+        grid-template-columns: 70% auto;
         width: 100%;
         height: 100%;
     }

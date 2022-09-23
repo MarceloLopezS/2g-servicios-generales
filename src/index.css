@@ -33,6 +33,7 @@
     --fs-650: 3.125rem;
     --fs-700: 4rem;
     --fs-800: 5rem;
+    --fs-900: 8rem;
 
     --fs-body: var(--fs-250);
     --fs-nav-links: var(--fs-400);
@@ -43,6 +44,9 @@
     --fs-project-title: var(--fs-600);
     --fs-cta-title: var(--fs-650);
     --fs-btn: var(--fs-100);
+    --fs-carousel-indicator: var(--fs-100);
+    --fs-carousel-number: var(--fs-900);
+    --fs-carousel-description: var(--fs-350);
 
     --size-25: 0.75rem;
     --size-50: 1rem;
@@ -261,6 +265,15 @@ button {
 .fs-body {
     font-size: var(--fs-body);
 }
+.fs-carousel-indicator {
+    font-size: var(--fs-carousel-indicator);
+}
+.fs-carousel-number {
+    font-size: var(--fs-carousel-number);
+}
+.fs-carousel-description {
+    font-size: var(--fs-carousel-description);
+}
 
 .bg-primary-400 {
     background-color: var(--clr-primary-400);
@@ -314,3 +327,4 @@ button {
     white-space: nowrap;
     border: 0;
 }
+

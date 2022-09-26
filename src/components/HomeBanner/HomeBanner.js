@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeBanner.css';
 import videoPath from '../../assets/videos/banner-video.mp4';
-import logoPath from '../../assets/images/logo.png';
+import logoPath from '../../assets/images/logo-banner.png';
 
 const HomeBanner = () => {
     return (

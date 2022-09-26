@@ -59,8 +59,9 @@
         content: '';
         background: url(../../assets/images/about-us-main-picture.jpg) no-repeat;
         background-size: cover;
+        background-position: center;
         position: absolute;
-        inset: -22% 0 0 0;
+        inset: -6vw 0 0 0;
     }
 
     .about-us__main-picture div {

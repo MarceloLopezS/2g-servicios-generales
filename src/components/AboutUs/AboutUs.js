@@ -6,10 +6,10 @@ const AboutUs = () => {
     return (
         <section className='about-us'>
             <section className='about-us__text container'>
-                <h2 className='fs-title-phrase highlighted text-neutral-900'>
+                <h2 className='fs-section-title highlighted text-neutral-900'>
                     Acerca de nosotros
                 </h2>
-                <p className='section-title highlighted text-primary-400'>
+                <p className='section-primary-text highlighted text-primary-400'>
                     Operando bajo los mejores estándares desde 2013
                 </p>
                 <p>

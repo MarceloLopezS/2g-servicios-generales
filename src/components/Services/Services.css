@@ -1,0 +1,85 @@
+.services {
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-bg-opacity-800);
+    color: var(--clr-neutral-100);
+}
+
+.services__grid {
+    display: grid;
+    place-items: center;
+}
+
+.services__text {
+    padding-block: var(--size-400);
+}
+
+.card[data-section='services'] {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    isolation: isolate;
+}
+
+.card[data-section='services'] .card__media, 
+.card[data-section='services'] .card__media > img {
+    width: 100%;
+    height: 100%;
+}
+
+.card[data-section='services'] .card__media img {
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card[data-section='services'] .card__body {
+    --padding: var(--size-150);
+
+    position: absolute;
+    color: var(--clr-neutral-100);
+    background: linear-gradient(
+        var(--clr-bg-opacity-100),
+        var(--clr-bg-opacity-700) 18%,
+        var(--clr-bg-opacity-900)
+    );
+    bottom: 0;
+    padding: var(--padding);
+    z-index: 2;
+}
+
+.card[data-section='services'] .card__body h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.card[data-section='services'] .card__body h3::after {
+    position: absolute;
+    content: '';
+    width: calc(100% + var(--padding));
+    height: 4px;
+    background-color: var(--clr-primary-400);
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+}
+
+.card[data-section='services'] .card__body p {
+    padding-top: var(--size-50);
+}
+
+@media (min-width: 69em) {
+    .services {
+        grid-template-columns: auto max(36.5vw, 30rem);
+        grid-template-areas: "services-grid services-text";
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--size-200);
+        padding: var(--size-400);
+        grid-area: services-grid;
+    }
+
+    .services__text {
+        max-width: 45ch;
+    }
+}

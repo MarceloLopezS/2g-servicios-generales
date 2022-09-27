@@ -6,12 +6,12 @@ const AboutUs = () => {
     return (
         <section className='about-us'>
             <section className='about-us__text container'>
-                <p className='fs-title-phrase highlighted text-neutral-900'>
-                    El profesionalismo importa
-                </p>
-                <h2 className='section-title highlighted text-primary-400'>
-                    Operando bajo los mejores estándares desde 2013
+                <h2 className='fs-title-phrase highlighted text-neutral-900'>
+                    Acerca de nosotros
                 </h2>
+                <p className='section-title highlighted text-primary-400'>
+                    Operando bajo los mejores estándares desde 2013
+                </p>
                 <p>
                     <span className='highlighted text-accent-400'>Conocemos lo que hacemos.</span> Usamos las mejores tecnologías para asegurar la eficiencia y confiabilidad de nuestro trabajo.
                 </p>

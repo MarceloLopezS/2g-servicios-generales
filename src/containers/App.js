@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
+import Services from '../components/Services/Services';
 
 class App extends Component {
     componentDidMount() {
@@ -64,9 +65,9 @@ class App extends Component {
                 <main>
                     <HomeBanner />
                     <AboutUs />
-                    {/* <Services />
+                    <Services />
+                    {/* <Quality Policy/>
                     <ProjectsGrid />
-                    <WhyWorkWithUS />
                     <CallToAction />
                     <ContactUs /> */}
                 </main>

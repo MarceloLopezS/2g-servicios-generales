@@ -259,12 +259,6 @@ button {
 .fs-title-phrase {
     font-size: var(--fs-title-phrase);
 }
-.fs-section-title {
-    font-size: var(--fs-section-title);
-    line-height: 1.1;
-    padding-top: var(--size-25);
-    padding-bottom: var(--size-150);
-}
 .fs-picture-info {
     font-size: var(--fs-50);
 }
@@ -326,6 +320,13 @@ button {
 }
 .padding-bottom-700 {
     padding-bottom: var(--size-700);
+}
+
+.section-title {
+    font-size: var(--fs-section-title);
+    line-height: 1.1;
+    padding-top: var(--size-25);
+    padding-bottom: var(--size-150);
 }
 
 .visually-hidden {

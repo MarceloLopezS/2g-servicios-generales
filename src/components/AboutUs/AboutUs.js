@@ -9,7 +9,7 @@ const AboutUs = () => {
                 <p className='fs-title-phrase highlighted text-neutral-900'>
                     El profesionalismo importa
                 </p>
-                <h2 className='fs-section-title highlighted text-primary-400'>
+                <h2 className='section-title highlighted text-primary-400'>
                     Operando bajo los mejores estándares desde 2013
                 </h2>
                 <p>

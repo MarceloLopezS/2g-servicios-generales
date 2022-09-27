@@ -144,6 +144,10 @@ body {
     font-family: var(--ff-secondary);
     font-size: var(--fs-body);
     color: var(--clr-neutral-900);
+    background-image: url(./assets/images/body-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 button {

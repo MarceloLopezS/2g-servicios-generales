@@ -256,7 +256,7 @@ button {
 .fs-banner-title {
     font-size: var(--fs-banner-title);
 }
-.fs-title-phrase {
+.fs-section-title {
     font-size: var(--fs-title-phrase);
 }
 .fs-picture-info {
@@ -322,7 +322,7 @@ button {
     padding-bottom: var(--size-700);
 }
 
-.section-title {
+.section-primary-text {
     font-size: var(--fs-section-title);
     line-height: 1.1;
     padding-top: var(--size-25);

@@ -11,10 +11,10 @@ const Services = () => {
     return (
         <section className='services'>
             <div className='services__text container'>
-                <h2 className='fs-title-phrase highlighted text-neutral-100'>
+                <h2 className='fs-section-title highlighted text-neutral-100'>
                     Nuestros Servicios
                 </h2>
-                <p className='section-title highlighted text-accent-400'>
+                <p className='section-primary-text highlighted text-accent-400'>
                     Tecnología punta a disposición de nuestros clientes
                 </p>
                 <p>

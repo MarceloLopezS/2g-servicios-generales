@@ -1,6 +1,7 @@
 .about-us {
     display: grid;
     place-items: center;
+    background-color: var(--clr-neutral-100);
 }
 
 .about-us__text {

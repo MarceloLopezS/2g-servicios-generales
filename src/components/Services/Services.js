@@ -19,7 +19,7 @@ const Services = () => {
                 </p>
                 <p>
                     <span className='highlighted text-accent-400'>Orgullosos de nuestro trabajo.</span> Contamos con equipamiento y personal adecuados para cada servicio.
-                    Trabajamos en torno a estándares de <span className='highlighted text-accent-400'>calidad, seguridad y medio ambiente</span> que nos permite asegurar una ejecución de proyectos impecable.
+                    Trabajamos en torno a estándares de <span className='highlighted text-accent-400'>calidad, seguridad y medio ambiente</span> que nos permiten asegurar una ejecución de proyectos impecable.
                 </p>
             </div>
             <div className='services__grid'>
@@ -28,7 +28,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg1} alt='Levantamiento topográfico'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Levantamiento Topográfico</h3>
+                        <h3>Levantamiento Topográfico</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg2} alt='Movimiento de tierras'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Movimiento de tierras</h3>
+                        <h3>Movimiento de tierras</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg3} alt='Sistemas de bombeo'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Sistemas de bombeo</h3>
+                        <h3>Sistemas de bombeo</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg4} alt='Sistemas de drenaje'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Sistemas de drenaje</h3>
+                        <h3>Sistemas de drenaje</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg5} alt='Construcción'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Construcción</h3>
+                        <h3>Construcción</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const Services = () => {
                         <img loading='lazy' src={serviceImg6} alt='Saneamiento físico legal de predios'></img>
                     </div>
                     <div className='card__body'>
-                        <h3 className='highlighted'>Saneamiento físico legal de predios</h3>
+                        <h3>Saneamiento físico legal de predios</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>

@@ -12,7 +12,7 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-900: hsl(0, 0%, 0%);
 
-    --clr-bg-opacity-100: hsl(212, 70%, 10%, 0.05);
+    --clr-bg-opacity-100: hsl(212, 70%, 10%, 0.01);
     --clr-bg-opacity-700: hsl(212, 70%, 10%, 0.7);
     --clr-bg-opacity-800: hsl(212, 70%, 10%, 0.85);
     --clr-bg-opacity-900: hsl(212, 70%, 10%, 0.95);
@@ -52,6 +52,7 @@
     --fs-carousel-number: var(--fs-900);
     --fs-carousel-description: var(--fs-350);
 
+    --size-10: 0.15rem;
     --size-25: 0.75rem;
     --size-50: 1rem;
     --size-75: 1.25rem;

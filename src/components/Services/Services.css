@@ -49,6 +49,9 @@
 
 .card[data-section='services'] .card__body h3 {
     position: relative;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
     display: inline-block;
 }
 
@@ -70,6 +73,7 @@
     .services {
         grid-template-columns: auto max(36.5vw, 30rem);
         grid-template-areas: "services-grid services-text";
+        user-select: none;
     }
 
     .services__grid {
@@ -79,7 +83,38 @@
         grid-area: services-grid;
     }
 
+    .card[data-section='services'] {
+        border-radius: var(--size-10);
+        overflow: hidden;
+    }
+
+    .card[data-section='services'] .card__body h3 {
+        font-size: var(--fs-200);
+    }
+
+    .card[data-section='services'] .card__body p {
+        font-size: var(--fs-100);
+    }
+
     .services__text {
         max-width: 45ch;
+        grid-area: services-text;
+    }
+}
+
+@media (hover: hover) {
+    .card[data-section='services'] {
+        transition: transform 500ms ease;
+    }
+    .card[data-section='services']:hover {
+        transform: scale(1.025);
+    }
+
+    .card[data-section='services'] .card__body {
+        transform: translateY(54%);
+        transition: transform 500ms ease;
+    }
+    .card[data-section='services']:hover .card__body {
+        transform: translateY(0%);
     }
 }

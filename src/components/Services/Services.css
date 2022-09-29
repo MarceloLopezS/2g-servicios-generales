@@ -7,10 +7,13 @@
 
 .services__grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+    gap: 0.15rem;
     place-items: center;
 }
 
 .services__text {
+    max-width: 45ch;
     padding-block: var(--size-400);
 }
 
@@ -25,13 +28,6 @@
 .card[data-section='services'] .card__media > img {
     width: 100%;
     height: 100%;
-}
-
-.card[data-section='services'] .card__media::after {
-    content: '';
-    position: absolute;
-    background-color: hsl(0, 0%, 0%, 0.15);
-    inset: 0;
 }
 
 .card[data-section='services'] .card__media img {
@@ -84,8 +80,8 @@
     }
 
     .services__grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--size-75);
+        width: 100%;
+        gap: var(--size-50);
         padding: var(--size-850) var(--size-600);
         grid-area: services-grid;
     }
@@ -109,6 +105,25 @@
     }
 }
 
+@media (min-width: 69em) and (max-width: 85.375em) {
+    .services {
+        padding-block: var(--size-400);
+    }
+    .services__grid {
+        gap: 0.2rem;
+        padding: 0 var(--size-200);
+        grid-area: services-grid;
+    }
+
+    .card[data-section='services'] .card__body h3 {
+        font-size: var(--fs-100);
+    }
+
+    .card[data-section='services'] .card__body p {
+        font-size: var(--fs-50);
+    }
+}
+
 @media (hover: hover) {
     .card[data-section='services'] {
         transition: transform 500ms ease;
@@ -119,6 +134,10 @@
     }
 
     .card[data-section='services'] .card__media::after {
+        content: '';
+        position: absolute;
+        background-color: hsl(0, 0%, 0%, 0.15);
+        inset: 0;
         opacity: 1;
         transition: opacity 500ms ease;
     }

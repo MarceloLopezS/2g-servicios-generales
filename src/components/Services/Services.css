@@ -22,6 +22,7 @@
     width: 100%;
     aspect-ratio: 4 / 5;
     isolation: isolate;
+    overflow: hidden;
 }
 
 .card[data-section='services'] .card__media, 
@@ -88,7 +89,6 @@
 
     .card[data-section='services'] {
         border-radius: var(--size-10);
-        overflow: hidden;
     }
 
     .card[data-section='services'] .card__body h3 {

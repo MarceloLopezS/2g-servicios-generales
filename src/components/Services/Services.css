@@ -107,7 +107,7 @@
 
 @media (min-width: 69em) and (max-width: 85.375em) {
     .services {
-        padding-block: var(--size-400);
+        padding-block: var(--size-500);
     }
     .services__grid {
         gap: 0.2rem;

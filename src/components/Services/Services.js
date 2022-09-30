@@ -2,10 +2,10 @@ import React from 'react';
 import './Services.css';
 import serviceImg1 from '../../assets/images/levantamiento-topográfico.jpg';
 import serviceImg2 from '../../assets/images/movimiento-tierras.jpg';
-import serviceImg3 from '../../assets/images/evaluación-sistemas-bombeo.jpg';
+import serviceImg3 from '../../assets/images/saneamiento-físico-legal-predios.jpg';
 import serviceImg4 from '../../assets/images/sistemas-drenaje.jpg';
 import serviceImg5 from '../../assets/images/construcción.jpg';
-import serviceImg6 from '../../assets/images/saneamiento-físico-legal-predios.jpg';
+import serviceImg6 from '../../assets/images/evaluación-sistemas-bombeo.jpg';
 
 const Services = () => {
     return (
@@ -43,10 +43,10 @@ const Services = () => {
                 </div>
                 <div className='card' data-section='services'>
                     <div className='card__media'>
-                        <img loading='lazy' src={serviceImg3} alt='Sistemas de bombeo'></img>
+                        <img loading='lazy' src={serviceImg3} alt='Saneamiento físico legal de predios'></img>
                     </div>
                     <div className='card__body'>
-                        <h3>Sistemas de bombeo</h3>
+                        <h3>Saneamiento físico legal de predios</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>
@@ -70,10 +70,10 @@ const Services = () => {
                 </div>
                 <div className='card' data-section='services'>
                     <div className='card__media'>
-                        <img loading='lazy' src={serviceImg6} alt='Saneamiento físico legal de predios'></img>
+                        <img loading='lazy' src={serviceImg6} alt='Sistemas de bombeo'></img>
                     </div>
                     <div className='card__body'>
-                        <h3>Saneamiento físico legal de predios</h3>
+                        <h3>Sistemas de bombeo</h3>
                         <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
                     </div>
                 </div>

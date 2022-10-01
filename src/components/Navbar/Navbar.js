@@ -20,13 +20,13 @@ const Navbar = ({ menuToggle }) => {
                 </button>
                 <ul id='navbar__primary-links' className='navbar__links | ff-primary fw-light' role='list' aria-label='Navegación primaria' aria-expanded='false'>
                     <li>
+                        <a href='#'>Inicio</a>
+                    </li>
+                    <li>
                         <a href='#'>Nosotros</a>
                     </li>
                     <li>
                         <a href='#'>Servicios</a>
-                    </li>
-                    <li>
-                        <a href='#'>Política de Calidad</a>
                     </li>
                     <li>
                         <a href='#'>Proyectos</a>

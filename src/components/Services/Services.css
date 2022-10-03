@@ -77,7 +77,6 @@
     .services {
         grid-template-columns: auto max(36.5vw, 30rem);
         grid-template-areas: "services-grid services-text";
-        user-select: none;
     }
 
     .services__grid {
@@ -89,6 +88,7 @@
 
     .card[data-section='services'] {
         border-radius: var(--size-10);
+        user-select: none;
     }
 
     .card[data-section='services'] .card__body h3 {

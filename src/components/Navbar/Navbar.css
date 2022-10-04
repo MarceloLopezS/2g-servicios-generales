@@ -7,7 +7,9 @@
     padding-block: var(--size-250);
     inset: 0 0 auto 0;
     z-index: 100;
-    transition: background-color 150ms ease;
+    transition-property: background-color, transform;
+    transition-duration: 200ms, 600ms;
+    transition-timing-function: ease;
 }
 
 .navbar[data-theme='inverse'] {

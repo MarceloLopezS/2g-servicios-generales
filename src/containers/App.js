@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Services from '../components/Services/Services';
 
 const useHomeBannerOnScreen = (options) => {
-    const ref = useRef(null);
+    const homeRef = useRef(null);
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
-        const currentRef = ref.current;
+        const currentRef = homeRef.current;
         let lastScrollTop;
         const scrollCallback = ()  => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -38,9 +38,9 @@ const useHomeBannerOnScreen = (options) => {
             if(currentRef) observer.unobserve(currentRef);
             document.removeEventListener('scroll', scrollCallback);
         }
-    }, [ref, options])
+    }, [homeRef, options])
 
-    return [ref];
+    return [homeRef];
 }
 
 const onMenuToggle = () => {
@@ -58,11 +58,11 @@ const onMenuToggle = () => {
 }
 
 const App = () => {
-    const [ref] = useHomeBannerOnScreen({
+    const [homeRef] = useHomeBannerOnScreen({
         root: null,
         rootMargin: '0px',
         threshold: 0.3
-    })
+    });
 
     return (
         <React.StrictMode>
@@ -70,7 +70,7 @@ const App = () => {
                 <Navbar menuToggle={onMenuToggle}/>
             </header>
             <main>
-                <HomeBanner reference={ref}/>
+                <HomeBanner reference={homeRef}/>
                 <AboutUs />
                 <Services />
                 {/* <Quality Policy/>

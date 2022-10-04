@@ -1,17 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Services from '../components/Services/Services';
 
-const useAboutUsOnScreen = (options) => {
+const useHomeBannerOutOfScreen = (options) => {
     const ref = useRef(null);
-    const [aboutUsVisible, setaboutUsVisible] = useState();
 
     useEffect(() => {
+        const navbar = document.querySelector('.navbar');
         const currentRef = ref.current;
         const callback = ([entry]) => {
-            setaboutUsVisible(entry.isIntersecting);
+            if(entry.isIntersecting) {
+                navbar.removeAttribute('data-theme')
+            } else {
+                navbar.setAttribute('data-theme', 'inverse');
+            }
         }
 
         const observer = new IntersectionObserver(callback, options);
@@ -22,7 +26,7 @@ const useAboutUsOnScreen = (options) => {
         }
     }, [ref, options])
 
-    return [ref, aboutUsVisible];
+    return [ref];
 }
 
 const onMenuToggle = () => {
@@ -39,20 +43,20 @@ const onMenuToggle = () => {
 }
 
 const App = () => {
-    const [ref, aboutUsVisible] = useAboutUsOnScreen({
+    const [ref] = useHomeBannerOutOfScreen({
         root: null,
         rootMargin: '0px',
-        threshold: 0.6
+        threshold: 0.4
     })
 
     return (
         <React.StrictMode>
             <header>
-                <Navbar theme={aboutUsVisible ? 'inverse' : null} menuToggle={onMenuToggle}/>
+                <Navbar menuToggle={onMenuToggle}/>
             </header>
             <main>
-                <HomeBanner />
-                <AboutUs reference={ref} />
+                <HomeBanner reference={ref}/>
+                <AboutUs />
                 <Services />
                 {/* <Quality Policy/>
                 <ProjectsGrid />

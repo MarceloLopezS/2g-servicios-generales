@@ -3,9 +3,9 @@ import './HomeBanner.css';
 import videoPath from '../../assets/videos/banner-video.mp4';
 import logoPath from '../../assets/images/logo-banner.png';
 
-const HomeBanner = () => {
+const HomeBanner = ({ reference }) => {
     return (
-        <section className='banner'>
+        <section className='banner' ref={reference}>
             <video className='banner__video' autoPlay muted loop>
                 <source src={videoPath} type='video/mp4'></source>
             </video>

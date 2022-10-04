@@ -5,7 +5,8 @@
     --clr-primary-300: hsl(212, 47%, 45%);
     --clr-primary-400: hsl(212, 47%, 38%);
 
-    --clr-accent-100: hsl(0, 0%, 80%);
+    --clr-accent-100: hsl(212, 0%, 80%);
+    --clr-accent-200: hsl(212, 0%, 58%);
     --clr-accent-400: hsl(212, 30%, 50%);
     --clr-accent-800: hsl(212, 70%, 10%);
 
@@ -53,6 +54,7 @@
     --fs-carousel-description: var(--fs-350);
 
     --size-10: 0.15rem;
+    --size-15: 0.35rem;
     --size-25: 0.75rem;
     --size-50: 1rem;
     --size-75: 1.25rem;
@@ -98,8 +100,8 @@
   font: inherit;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 import './AboutUs.css';
 import Carousel from '../Carousel/Carousel';
 
-const AboutUs = () => {
+const AboutUs = ({ reference }) => {
     return (
-        <section className='about-us'>
+        <section className='about-us' ref={reference}>
             <section className='about-us__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-900'>
                     Acerca de nosotros

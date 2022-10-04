@@ -1,86 +1,73 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Services from '../components/Services/Services';
 
-class App extends Component {
-    componentDidMount() {
-        // About-Us Carousels
-        const aboutUsCarousels = document.querySelectorAll('.carousel[data-section="about-us"]');
-        const nextSlide = (carouselTrack, numberOfSlides) => {
-            const firstSlide = carouselTrack.querySelector('.carousel__slide');
-            carouselTrack.style.transition = 'transform 500ms ease-out';
-            if(numberOfSlides > 2) {
-                carouselTrack.style.transform = `translateY(-${(100 / numberOfSlides) * 2}%)`;
-            } else {
-                carouselTrack.style.transform = `translateY(-${100 / numberOfSlides}%)`;
-            }
-            setTimeout(() => {
-                carouselTrack.style.transition = 'none';
-                carouselTrack.insertAdjacentElement('beforeend', firstSlide);
-                if(numberOfSlides > 2) {
-                    carouselTrack.style.transform = `translateY(-${100 / numberOfSlides}%)`
-                } else {
-                    carouselTrack.style.transform = `translateY(0%)`;
-                }
-            }, 500)
+const useAboutUsOnScreen = (options) => {
+    const ref = useRef(null);
+    const [aboutUsVisible, setaboutUsVisible] = useState();
+
+    useEffect(() => {
+        const currentRef = ref.current;
+        const callback = ([entry]) => {
+            setaboutUsVisible(entry.isIntersecting);
         }
-        
-        aboutUsCarousels.forEach(carousel => {
-            const track = carousel.querySelector('.carousel__track');
-            const slides = track.querySelectorAll('.carousel__slide');
-            const numberOfSlides = slides.length;
-            track.style.height = `${100 * numberOfSlides}%`;
-            if(numberOfSlides > 2) {
-                const lastSlide = slides[slides.length - 1];
-                track.insertAdjacentElement('afterbegin', lastSlide);
-                track.style.transform = `translateX(-${100 / numberOfSlides}%)`;
-            }
-            setInterval(() => {
-                nextSlide(track, numberOfSlides);
-            }, 4000)
-        })
-    }
 
-    onMenuToggle() {
-        const navLinks = document.querySelector('#navbar__primary-links');
-        const navDropIcon = document.querySelector('#navbar__drop');
-        const navCloseIcon = document.querySelector('#navbar__close');
+        const observer = new IntersectionObserver(callback, options);
+        if(currentRef) observer.observe(currentRef);
 
-        navLinks.getAttribute('aria-expanded') === 'true' 
-        ? navLinks.setAttribute('aria-expanded', 'false')
-        : navLinks.setAttribute('aria-expanded', 'true')
-        navCloseIcon.toggleAttribute('data-visible');
-        navDropIcon.toggleAttribute('data-visible');
-        navLinks.toggleAttribute('data-expanded');
-    }
+        return () => {
+            if(currentRef) observer.unobserve(currentRef);
+        }
+    }, [ref, options])
 
-    render() {
-        return (
-            <React.Fragment>
-                <header>
-                    <Navbar menuToggle={this.onMenuToggle}/>
-                </header>
-                <main>
-                    <HomeBanner />
-                    <AboutUs />
-                    <Services />
-                    {/* <Quality Policy/>
-                    <ProjectsGrid />
-                    <CallToAction />
-                    <ContactUs /> */}
-                </main>
-                <footer>
-                    {/* <LogoAndSocialLinks />
-                    <FooterNav />
-                    <Address />
-                    <ContactInfo />
-                    <Copyrights /> */}
-                </footer>
-            </React.Fragment>
-        );
-    }
+    return [ref, aboutUsVisible];
+}
+
+const onMenuToggle = () => {
+    const navLinks = document.querySelector('#navbar__primary-navigation');
+    const navDropIcon = document.querySelector('#navbar__drop');
+    const navCloseIcon = document.querySelector('#navbar__close');
+
+    navLinks.getAttribute('aria-expanded') === 'true' 
+    ? navLinks.setAttribute('aria-expanded', 'false')
+    : navLinks.setAttribute('aria-expanded', 'true')
+    navCloseIcon.toggleAttribute('data-visible');
+    navDropIcon.toggleAttribute('data-visible');
+    navLinks.toggleAttribute('data-expanded');
+}
+
+const App = () => {
+    const [ref, aboutUsVisible] = useAboutUsOnScreen({
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6
+    })
+
+    return (
+        <React.StrictMode>
+            <header>
+                <Navbar theme={aboutUsVisible ? 'inverse' : null} menuToggle={onMenuToggle}/>
+            </header>
+            <main>
+                <HomeBanner />
+                <AboutUs reference={ref} />
+                <Services />
+                {/* <Quality Policy/>
+                <ProjectsGrid />
+                <CallToAction />
+                <ContactUs /> */}
+            </main>
+            <footer>
+                {/* <LogoAndSocialLinks />
+                <FooterNav />
+                <Address />
+                <ContactInfo />
+                <Copyrights /> */}
+            </footer>
+        </React.StrictMode>
+    );
 }
 
 export default App;

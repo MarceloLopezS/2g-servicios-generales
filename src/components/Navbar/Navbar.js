@@ -2,14 +2,14 @@ import React from 'react';
 import './Navbar.css';
 import logoPath from '../../assets/images/logo.png';
 
-const Navbar = ({ menuToggle }) => {
+const Navbar = ({ theme, menuToggle }) => {
     return (
-        <nav className='navbar'>
+        <div className='navbar' data-theme={theme}>
             <div className='container navbar__container'>
-                <a className='navbar__brand'>
+                <a className='navbar__brand' href='#inicio'>
                     <img src={logoPath} alt='2G Logo'></img>
                 </a>
-                <button className='navbar__mobile-menu-toggle' aria-controls='navbar__primary-links' onClick={menuToggle}>
+                <button className='navbar__mobile-menu-toggle' aria-controls='navbar__primary-navigation' aria-expanded='false' onClick={menuToggle}>
                     <svg className='navbar__icon' id='navbar__drop' data-visible xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
@@ -18,25 +18,27 @@ const Navbar = ({ menuToggle }) => {
                     </svg>
                     <span className='visually-hidden'>Menu</span>
                 </button>
-                <ul id='navbar__primary-links' className='navbar__links | ff-primary fw-light' role='list' aria-label='Navegación primaria' aria-expanded='false'>
-                    <li>
-                        <a href='#'>Inicio</a>
-                    </li>
-                    <li>
-                        <a href='#'>Nosotros</a>
-                    </li>
-                    <li>
-                        <a href='#'>Servicios</a>
-                    </li>
-                    <li>
-                        <a href='#'>Proyectos</a>
-                    </li>
-                    <li>
-                        <a href='#'>Contacto</a>
-                    </li>
-                </ul>
+                <nav>
+                    <ul id='navbar__primary-navigation' className='navbar__links | ff-primary fw-light' aria-label='Navegación primaria'>
+                        <li className='active'>
+                            <a href='#home'>Inicio</a>
+                        </li>
+                        <li>
+                            <a href='#aboutUs'>Nosotros</a>
+                        </li>
+                        <li>
+                            <a href='#services'>Servicios</a>
+                        </li>
+                        <li>
+                            <a href='#projects'>Proyectos</a>
+                        </li>
+                        <li>
+                            <a href='#contactUs'>Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </div>
     )
 }
 

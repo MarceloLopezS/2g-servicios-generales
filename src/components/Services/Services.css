@@ -1,8 +1,21 @@
 .services {
+    position: relative;
     display: grid;
     place-items: center;
-    background-color: var(--clr-bg-opacity-800);
     color: var(--clr-neutral-100);
+    background-image: url(../../assets/images/services-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    isolation: isolate;
+}
+
+.services::after {
+    position: absolute;
+    content: '';
+    background-color: var(--clr-bg-opacity-800);
+    inset: 0;
+    z-index: -1;
 }
 
 .services__grid {

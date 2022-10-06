@@ -56,7 +56,7 @@ const useHomeBannerOnScreen = (options) => {
             document.removeEventListener('scroll', scrollCallback);
             screenOrientation.removeEventListener('change', orientationCallback);
         }
-    }, [homeRef, orientationChange])
+    }, [homeRef, options, orientationChange])
 
     return [homeRef];
 }

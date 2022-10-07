@@ -1,11 +1,11 @@
 import React from 'react';
 import './Services.css';
-import serviceImg1 from '../../assets/images/levantamiento-topográfico.jpg';
+import serviceImg1 from '../../assets/images/levantamiento-topografico.jpg';
 import serviceImg2 from '../../assets/images/movimiento-tierras.jpg';
-import serviceImg3 from '../../assets/images/saneamiento-físico-legal-predios.jpg';
+import serviceImg3 from '../../assets/images/saneamiento-fisico-legal-predios.jpg';
 import serviceImg4 from '../../assets/images/sistemas-drenaje.jpg';
-import serviceImg5 from '../../assets/images/evaluación-sistemas-bombeo.jpg';
-import serviceImg6 from '../../assets/images/construcción.jpg';
+import serviceImg5 from '../../assets/images/evaluacion-sistemas-bombeo.jpg';
+import serviceImg6 from '../../assets/images/construccion.jpg';
 
 const Services = () => {
     return (

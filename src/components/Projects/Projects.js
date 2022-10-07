@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.css';
-import projectImg1 from '../../assets/images/remodelación-hotel-costa-del-sol.jpeg';
+import projectImg1 from '../../assets/images/remodelacion-hotel-costa-del-sol.jpeg';
 import projectImg2 from '../../assets/images/proyecto-inmobiliario.jpeg';
-import projectImg3 from '../../assets/images/estación-meteorológica.jpeg';
-import projectImg4 from '../../assets/images/muro-perimétrico.jpeg';
+import projectImg3 from '../../assets/images/estacion-meteorologica.jpeg';
+import projectImg4 from '../../assets/images/muro-perimetrico.jpeg';
 
 const Projects = () => {
     return (

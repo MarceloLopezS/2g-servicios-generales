@@ -299,6 +299,9 @@ button {
 .padding-block-400 {
     padding-block: var(--size-400);
 }
+.padding-top-150 {
+    padding-top: var(--size-150);
+}
 .padding-top-200 {
     padding-top: var(--size-200);
 }
@@ -326,6 +329,10 @@ button {
     line-height: 1.1;
     padding-top: var(--size-25);
     padding-bottom: var(--size-150);
+}
+
+.text-align-justify {
+    text-align: justify;
 }
 
 .visually-hidden {

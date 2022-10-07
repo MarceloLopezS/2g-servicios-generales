@@ -43,6 +43,7 @@ const useHomeBannerOnScreen = (options) => {
                     brand.setAttribute('data-show','true');
                     document.addEventListener('scroll', scrollCallback);
                 } else {
+                    navbar.setAttribute('data-slide','down');
                     brand.setAttribute('data-show','true');
                 }
             }

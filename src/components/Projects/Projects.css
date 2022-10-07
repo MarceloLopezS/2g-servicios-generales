@@ -1,0 +1,155 @@
+.projects {
+    position: relative;
+    display: grid;
+    background-image: url(../../assets/images/projects-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: center;
+    background-attachment: fixed;
+    isolation: isolate;
+    background-color: var(--clr-accent-800);
+}
+
+.projects::after {
+    position: absolute;
+    content: '';
+    background-color: var(--clr-bg-opacity-800);
+    inset: 0;
+    z-index: -1;
+}
+
+.projects__text {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding-block: var(--size-400);
+    isolation: isolate;
+}
+
+.projects__text > div {
+    max-width: 45ch;
+}
+
+.projects__text > div:last-child p:last-child {
+    padding-top: var(--size-150);
+}
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.card[data-section='projects'] {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.card[data-section='projects'] > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.card[data-section='projects'] .card__media {
+    position: relative;
+    z-index: -1;
+}
+
+.card[data-section='projects'] .card__media::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(0, 0%, 0%, 0.45);
+    inset: 0;
+}
+
+.card[data-section='projects'] .card__media, 
+.card[data-section='projects'] .card__media > img {
+    width: 100%;
+    height: 100%;
+}
+
+.card[data-section='projects'] .card__media img {
+    object-fit: cover;
+}
+
+.card[data-section='projects'] .card__body {
+    display: flex;
+    flex-direction: column;
+    max-width: 25ch;
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-100);
+    padding: 6.25em 0 6.25em 2em;
+}
+
+.card[data-section='projects'] .card__body h3 {
+    position: relative;
+    display: inline-block;
+    font-family: var(--ff-primary);
+    font-size: 1.375em;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    padding: var(--size-50) 0 var(--size-25) 0;
+}
+
+.card[data-section='projects'] .card__body h3::after {
+    position: absolute;
+    content: '';
+    width: 1.25em;
+    height: 4px;
+    background-color: var(--clr-neutral-100);
+    bottom: 0;
+    left: 0;
+}
+
+.card[data-section='projects'] .card__body h3 + p {
+    font-size: 0.95em;
+    text-transform: uppercase;
+    padding: var(--size-25) 0 var(--size-15) 0;
+}
+
+.card[data-section='projects'] .card__body p:not(:first-child) {
+    color: var(--clr-accent-100);
+    font-family: var(--ff-secondary);
+}
+
+.card[data-section='projects'] .card__body button {
+    font-size: 0.8em;
+    width: 100%;
+    padding-block: var(--size-50);
+    margin-top: auto;
+}
+
+@media (min-width: 69em) {
+    .projects__text {
+        width: 100%;
+        grid-template-columns: repeat(2, 50%);
+        padding-block: var(--size-800);
+    }
+
+    .projects__grid {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .card[data-section='projects'] .card__body {
+        font-size: clamp(0.85rem, 1vw, 1rem);
+    }
+}
+
+@media (hover: hover) {
+    .card[data-section='projects'] .card__media {
+        transition: transform 500ms ease-out;
+    }
+
+    .card[data-section='projects']:hover .card__media {
+        transform: scale(1.1);
+    }
+    
+    .card[data-section='projects'] .card__media::after {
+        transition: background-color 500ms ease-out;
+    }
+
+    .card[data-section='projects']:hover .card__media::after {
+        background-color: var(--clr-bg-opacity-800);
+    }
+}

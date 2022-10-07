@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Services from '../components/Services/Services';
+import Projects from '../components/Projects/Projects';
 
 const useHomeBannerOnScreen = (options) => {
     const homeRef = useRef(null);
@@ -91,9 +92,8 @@ const App = () => {
                 <HomeBanner reference={homeRef}/>
                 <AboutUs />
                 <Services />
-                {/* <Quality Policy/>
-                <ProjectsGrid />
-                <CallToAction />
+                <Projects />
+                {/* <CallToAction />
                 <ContactUs /> */}
             </main>
             <footer>

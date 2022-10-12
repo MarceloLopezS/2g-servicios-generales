@@ -11,12 +11,15 @@
     --clr-accent-800: hsl(212, 70%, 10%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(0, 10%, 92%);
     --clr-neutral-900: hsl(0, 0%, 0%);
 
     --clr-bg-opacity-100: hsl(212, 70%, 10%, 0.01);
     --clr-bg-opacity-700: hsl(212, 70%, 10%, 0.7);
     --clr-bg-opacity-800: hsl(212, 70%, 10%, 0.85);
     --clr-bg-opacity-900: hsl(212, 70%, 10%, 0.95);
+
+    --clr-shadow-900: hsla(0, 0%, 13%, 0.5);
 
     --ff-primary: 'Sura', serif;
     --ff-secondary: 'Enriqueta', serif;
@@ -26,6 +29,7 @@
     --fw-bold: 700;
 
     --fs-50: 0.8rem;
+    --fs-75: 0.9rem;
     --fs-100: 0.95rem;
     --fs-200: 1rem;
     --fs-250: 1.15rem;
@@ -155,6 +159,28 @@ button {
     cursor: pointer;
 }
 
+label, input {
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+::placeholder {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-light);
+}
+
+@media (min-width: 63em) {
+    ::placeholder {
+        font-size: var(--fs-200);
+    }
+}
+
 #root {
     max-width: 120rem;
     margin-inline: auto;
@@ -169,6 +195,7 @@ button {
 }
 
 .btn {
+    font-family: var(--ff-primary);
     font-size: var(--fs-btn);
     font-weight: var(--fw-regular);
     text-transform: uppercase;
@@ -227,6 +254,14 @@ button {
 }
 .text-neutral-900 {
     color: var(--clr-neutral-900);
+}
+
+.text-form-label {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-75);
+    font-weight: var(--fw-regular);
+    text-transform: uppercase;
+    color: var(--clr-primary-400);
 }
 
 .highlighted {

@@ -1,0 +1,112 @@
+.contact-us {
+    display: grid;
+}
+
+.contact-us__text {
+    max-width: 45ch;
+    padding-top: var(--size-400);
+}
+
+.contact-us__text > p:first-of-type {
+    position: relative;
+}
+
+.contact-us__text > p:first-of-type::after {
+    position: absolute;
+    content: '';
+    width: var(--size-300);
+    height: 3px;
+    background-color: var(--clr-primary-400);
+    top: 100%;
+    left: 0;
+}
+
+.contact-us__info {
+    padding-top: var(--size-100);
+}
+
+.contact-us__info-title {
+    font-weight: var(--fw-regular);
+}
+
+.contact-us__form-container {
+    padding-top: var(--size-100);
+    padding-bottom: var(--size-400);
+}
+
+.contact-us__form-container p:first-of-type {
+    padding-bottom: var(--size-25);
+}
+
+.contact-us__form-group {
+    padding-block: var(--size-15);
+}
+
+.contact-us__form-label {
+    padding-bottom: var(--size-75);
+}
+
+.contact-us__input-container {
+    position: relative;
+    border-bottom: 1px solid var(--clr-primary-400);
+}
+
+.contact-us__input-container::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-primary-400);
+    top: 100%;
+    left: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.contact-us__input-container:has(input:focus-visible, textarea:focus-visible)::after {
+    transform: scale(1);
+}
+
+.contact-us__input-container > textarea {
+    height: var(--size-800);
+    resize: none;
+}
+
+.contact-us__form button {
+    font-size: var(--fs-75);
+    padding: var(--size-25) var(--size-250);
+    margin-top: var(--size-50);
+}
+
+@media (min-width: 69em) {
+    .contact-us {
+        grid-template-columns: repeat(2, 50%);
+        place-items: center;
+        background-color: var(--clr-neutral-200);
+    }
+
+    .contact-us__text {
+        padding-top: 0;
+    }
+
+    .contact-us__form-container {
+        position: relative;
+        width: 100%;
+        padding: var(--size-850) var(--size-850);
+        isolation: isolate;
+    }
+
+    .contact-us__form-container::after {
+        position: absolute;
+        content: '';
+        background-color: var(--clr-neutral-100);
+        box-shadow: 0 0 57px var(--clr-shadow-900);
+        inset: -4vw 0 -2vw 0;
+        z-index: -1;
+    }
+
+    .contact-us__form-container > p:first-child {
+        display: none;
+    }
+}

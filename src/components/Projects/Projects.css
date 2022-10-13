@@ -33,9 +33,10 @@
 .projects__text > div:last-child p:last-child {
     padding-top: var(--size-150);
 }
+
 .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
 }
 
 .card[data-section='projects'] {
@@ -121,6 +122,10 @@
 }
 
 @media (min-width: 69em) {
+    .projects {
+        padding-bottom: var(--size-800);
+    }
+
     .projects__text {
         width: 100%;
         grid-template-columns: repeat(2, 50%);

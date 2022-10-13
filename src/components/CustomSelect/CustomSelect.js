@@ -130,6 +130,7 @@ const useDropDown = () => {
                     case 'Escape':
                     case 'Enter': {
                         this.dropDownList.removeAttribute('data-show');
+                        break
                     }
                     default: {
                         clearTimeout(this.debounceTimeout);

@@ -7,7 +7,7 @@ import projectImg4 from '../../assets/images/muro-perimetrico.jpeg';
 
 const Projects = () => {
     return (
-        <section className='projects'>
+        <section id='projects' className='projects'>
             <div className='projects__text container'>
                 <div>
                     <h2 className='fs-section-title highlighted text-neutral-100'>

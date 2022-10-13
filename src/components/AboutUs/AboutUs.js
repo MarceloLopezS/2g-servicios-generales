@@ -4,7 +4,7 @@ import Carousel from '../Carousel/Carousel';
 
 const AboutUs = () => {
     return (
-        <section className='about-us'>
+        <section id='about-us' className='about-us'>
             <section className='about-us__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-900'>
                     Acerca de nosotros

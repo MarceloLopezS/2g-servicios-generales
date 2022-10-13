@@ -5,7 +5,7 @@ import logoPath from '../../assets/images/logo-banner.png';
 
 const HomeBanner = ({ reference }) => {
     return (
-        <section className='banner' ref={reference}>
+        <section id='home' className='banner' ref={reference}>
             <video className='banner__video' autoPlay muted loop>
                 <source src={videoPath} type='video/mp4'></source>
             </video>

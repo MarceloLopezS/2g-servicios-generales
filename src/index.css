@@ -170,6 +170,11 @@ input, textarea {
     outline: 0;
 }
 
+a:focus-visible {
+    outline: 0;
+    color: var(--clr-accent-200);
+}
+
 ::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -248,15 +253,16 @@ input, textarea {
     background-color: var(--clr-primary-400);
 }
 
-.btn[data-bg='primary']:hover {
+.btn[data-bg='primary']:hover, .btn[data-bg='primary']:focus-visible {
     color: var(--clr-primary-400);
+    outline: 0;
 }
 
 .btn[data-bg='primary']::after {
     background-color: var(--clr-accent-100);
 }
 
-.btn[data-bg='primary']:hover::after {
+.btn[data-bg='primary']:hover::after, .btn[data-bg='primary']:focus-visible::after {
     inset: 0;
 }
 

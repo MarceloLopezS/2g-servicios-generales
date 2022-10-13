@@ -76,8 +76,7 @@
     left: 0;
 }
 
-.navbar__links li:not(.active):hover, .navbar__links a:focus-visible {
-    outline: 0;
+.navbar__links li:not(.active):hover {
     color: var(--clr-accent-200);
 }
 

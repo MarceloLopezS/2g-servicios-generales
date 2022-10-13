@@ -5,9 +5,9 @@ import projectImg2 from '../../assets/images/proyecto-inmobiliario.jpeg';
 import projectImg3 from '../../assets/images/estacion-meteorologica.jpeg';
 import projectImg4 from '../../assets/images/muro-perimetrico.jpeg';
 
-const Projects = () => {
+const Projects = ({ reference }) => {
     return (
-        <section id='projects' className='projects'>
+        <section id='projects' className='projects' ref={reference}>
             <div className='projects__text container'>
                 <div>
                     <h2 className='fs-section-title highlighted text-neutral-100'>

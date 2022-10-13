@@ -6,14 +6,19 @@ import Services from '../components/Services/Services';
 import Projects from '../components/Projects/Projects';
 import ContactUs from '../components/ContacUs/ContactUs';
 
-const useHomeBannerOnScreen = (options) => {
+const usePrimarySectionsOnScreen = () => {
     const homeRef = useRef(null);
     const [orientationChange, setOrientationChange] = useState(0);
+    const aboutUsRef = useRef(null);
+    const servicesRef = useRef(null);
+    const projectsRef = useRef(null);
+    const contactUsRef = useRef(null);
+    const refsArray = [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef];
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
         const brand = navbar.querySelector('.navbar__brand');
-        const currentRef = homeRef.current;
+        const navLinks = navbar.querySelectorAll('a');
         let lastScrollTop;
         const screenOrientation = window.screen.orientation;
         const scrollCallback = ()  => {
@@ -28,8 +33,24 @@ const useHomeBannerOnScreen = (options) => {
         const orientationCallback = () => {
             setOrientationChange(orientationChange + 1);
         }
-        const observerCallback = ([entry]) => {
+        const activateNavbarLink = ([ entry ]) => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    const linkHref = link.getAttribute('href');
+                    linkHref.includes(entry.target.id)
+                    ? link.parentElement.classList.add('active')
+                    : link.parentElement.classList.remove('active')
+                })
+            }
+        }
+        const navbarReact = ([ entry ]) => {
             if(entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    const linkHref = link.getAttribute('href');
+                    linkHref.includes(entry.target.id)
+                    ? link.parentElement.classList.add('active')
+                    : link.parentElement.classList.remove('active')
+                })
                 if (window.innerWidth >= 1008) {
                     brand.setAttribute('data-show','false');
                 } else {
@@ -50,52 +71,63 @@ const useHomeBannerOnScreen = (options) => {
             }
         }
 
-        const observer = new IntersectionObserver(observerCallback, options);
-        if(currentRef) observer.observe(currentRef);
+        const homeOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        }
+        const homeObserver = new IntersectionObserver(navbarReact, homeOptions);
+        if(homeRef.current) homeObserver.observe(homeRef.current);
         screenOrientation.addEventListener('change', orientationCallback);
-        
+
+        const sectionOptions = window.innerWidth >= 1008
+        ? {
+            root: null,
+            rootMargin: '-27% 0px -25% 0px',
+            threshold: 0.22
+        }
+        : {
+            root: null,
+            rootMargin: '-25% 0px -30% 0px',
+            threshold: 0.1
+        }
+        const observedSections = refsArray.map(ref => {
+            const sectionObserver = new IntersectionObserver(activateNavbarLink, sectionOptions);
+            if(ref.current) sectionObserver.observe(ref.current);
+
+            return {
+                currentRef : ref.current, 
+                observer : sectionObserver
+            };
+        });
+
         return () => {
-            if(currentRef) observer.unobserve(currentRef);
+            observedSections.forEach(observed => {
+                if(observed.currentRef) observed.observer.unobserve(observed.currentRef);
+            })
+            if(homeRef.current) homeObserver.unobserve(homeRef.current);
             document.removeEventListener('scroll', scrollCallback);
             screenOrientation.removeEventListener('change', orientationCallback);
         }
-    }, [homeRef, options, orientationChange])
+    }, [refsArray, orientationChange]);
 
-    return [homeRef];
-}
-
-const onMenuToggle = () => {
-    const menuToggleButton = document.querySelector('.navbar__mobile-menu-toggle');
-    const navLinks = document.querySelector('#navbar__primary-navigation');
-    const navDropIcon = document.querySelector('#navbar__drop');
-    const navCloseIcon = document.querySelector('#navbar__close');
-
-    menuToggleButton.getAttribute('aria-expanded') === 'true' 
-    ? menuToggleButton.setAttribute('aria-expanded', 'false')
-    : menuToggleButton.setAttribute('aria-expanded', 'true')
-    navCloseIcon.toggleAttribute('data-visible');
-    navDropIcon.toggleAttribute('data-visible');
-    navLinks.toggleAttribute('data-expanded');
+    return refsArray;
 }
 
 const App = () => {
-    const [homeRef] = useHomeBannerOnScreen({
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.3
-    });
+    const [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef] = usePrimarySectionsOnScreen();
 
     return (
         <React.StrictMode>
             <header>
-                <Navbar menuToggle={onMenuToggle}/>
+                <Navbar />
             </header>
             <main>
                 <HomeBanner reference={homeRef}/>
-                <AboutUs />
-                <Services />
-                <Projects />
-                <ContactUs />
+                <AboutUs reference={aboutUsRef}/>
+                <Services reference={servicesRef}/>
+                <Projects reference={projectsRef}/>
+                <ContactUs reference={contactUsRef}/>
             </main>
             <footer>
                 {/* <LogoAndSocialLinks />

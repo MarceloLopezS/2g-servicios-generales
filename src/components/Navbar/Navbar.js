@@ -2,9 +2,25 @@ import React from 'react';
 import './Navbar.css';
 import logoPath from '../../assets/images/logo.png';
 
-const Navbar = ({ theme, menuToggle }) => {
+const menuToggle = () => {
+    if (window.innerWidth < 1008) {
+        const menuToggleButton = document.querySelector('.navbar__mobile-menu-toggle');
+        const navLinks = document.querySelector('#navbar__primary-navigation');
+        const navDropIcon = document.querySelector('#navbar__drop');
+        const navCloseIcon = document.querySelector('#navbar__close');
+
+        menuToggleButton.getAttribute('aria-expanded') === 'true' 
+        ? menuToggleButton.setAttribute('aria-expanded', 'false')
+        : menuToggleButton.setAttribute('aria-expanded', 'true')
+        navCloseIcon.toggleAttribute('data-visible');
+        navDropIcon.toggleAttribute('data-visible');
+        navLinks.toggleAttribute('data-expanded');
+    }
+}
+
+const Navbar = () => {
     return (
-        <div className='navbar' data-theme={theme}>
+        <div className='navbar'>
             <div className='container navbar__container'>
                 <img className='navbar__brand' src={logoPath} alt='2G Logo'></img>
                 <button className='navbar__mobile-menu-toggle' aria-controls='navbar__primary-navigation' aria-expanded='false' onClick={menuToggle}>
@@ -18,19 +34,19 @@ const Navbar = ({ theme, menuToggle }) => {
                 </button>
                 <nav>
                     <ul id='navbar__primary-navigation' className='navbar__links | ff-primary fw-light' aria-label='Navegación primaria'>
-                        <li className='active'>
+                        <li onClick={menuToggle}>
                             <a href='#home'>Inicio</a>
                         </li>
-                        <li>
+                        <li onClick={menuToggle}>
                             <a href='#about-us'>Nosotros</a>
                         </li>
-                        <li>
+                        <li onClick={menuToggle}>
                             <a href='#services'>Servicios</a>
                         </li>
-                        <li>
+                        <li onClick={menuToggle}>
                             <a href='#projects'>Proyectos</a>
                         </li>
-                        <li>
+                        <li onClick={menuToggle}>
                             <a href='#contact-us'>Contacto</a>
                         </li>
                     </ul>

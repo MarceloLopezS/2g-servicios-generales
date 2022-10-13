@@ -137,7 +137,7 @@
 
 @media (min-width: 121em) {
     .about-us {
-        grid-template-columns: auto max(36.826%, 30rem);
+        grid-template-columns: auto max(36.577%, 30rem);
     }
 
     .about-us__main-picture::before {

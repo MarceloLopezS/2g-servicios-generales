@@ -139,7 +139,7 @@
 
 @media (min-width: 121em) {
     .services {
-        grid-template-columns: auto max(36.826%, 30rem);
+        grid-template-columns: auto max(36.577%, 30rem);
     }
 }
 

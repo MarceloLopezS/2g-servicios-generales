@@ -7,9 +7,9 @@ import serviceImg4 from '../../assets/images/sistemas-drenaje.jpg';
 import serviceImg5 from '../../assets/images/evaluacion-sistemas-bombeo.jpg';
 import serviceImg6 from '../../assets/images/construccion.jpg';
 
-const Services = () => {
+const Services = ({ reference }) => {
     return (
-        <section id='services' className='services'>
+        <section id='services' className='services' ref={reference}>
             <div className='services__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-100'>
                     Nuestros Servicios

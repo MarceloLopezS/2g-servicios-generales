@@ -56,17 +56,13 @@
 }
 
 .navbar__links li {
+    position: relative;
     padding-block: var(--size-15);
     cursor: pointer;
     transition: color 300ms ease-in;
 }
 
-.navbar__links li.active {
-    position: relative;
-    font-weight: var(--fw-bold);
-}
-
-.navbar__links li.active::after {
+.navbar__links li::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -74,6 +70,16 @@
     background-color: var(--clr-accent-400);
     bottom: 0;
     left: 0;
+    transform: scale(0);
+    transition: transform 700ms ease-in-out;
+}
+
+.navbar__links li.active {
+    font-weight: var(--fw-bold);
+}
+
+.navbar__links li.active::after {
+    transform: scale(1);
 }
 
 .navbar__links li:not(.active):hover {

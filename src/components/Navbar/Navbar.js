@@ -6,9 +6,7 @@ const Navbar = ({ theme, menuToggle }) => {
     return (
         <div className='navbar' data-theme={theme}>
             <div className='container navbar__container'>
-                <a className='navbar__brand' href='#inicio'>
-                    <img src={logoPath} alt='2G Logo'></img>
-                </a>
+                <img className='navbar__brand' src={logoPath} alt='2G Logo'></img>
                 <button className='navbar__mobile-menu-toggle' aria-controls='navbar__primary-navigation' aria-expanded='false' onClick={menuToggle}>
                     <svg className='navbar__icon' id='navbar__drop' data-visible xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>

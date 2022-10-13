@@ -195,6 +195,12 @@ input, textarea {
     margin-inline: auto;
 }
 
+@media (min-width: 120rem) {
+    .container {
+        width: calc(var(--max-width) - (var(--inline-gap) * 2));
+    }
+}
+
 .btn {
     font-family: var(--ff-primary);
     font-size: var(--fs-btn);

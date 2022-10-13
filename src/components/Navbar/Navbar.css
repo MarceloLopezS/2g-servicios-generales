@@ -33,6 +33,7 @@
 }
 
 .navbar__brand {
+    width: 5.7em;
     opacity: 0;
     transition: opacity 500ms ease-in;
 }
@@ -43,10 +44,6 @@
 
 .navbar__brand[data-show='false'] {
     opacity: 0;
-}
-
-.navbar__brand img{
-    width: 5.7em;
 }
 
 .navbar__mobile-menu-toggle {
@@ -97,12 +94,9 @@
     }
 
     .navbar__brand {
+        width: 4.125em;
         opacity: 1;
         padding-block: var(--size-75);
-    }
-
-    .navbar__brand img {
-        width: 4.125em;
     }
 
     .navbar__container {

@@ -134,3 +134,13 @@
         padding-left: var(--size-150);
     }
 }
+
+@media (min-width: 121em) {
+    .about-us {
+        grid-template-columns: auto max(36.826%, 30rem);
+    }
+
+    .about-us__main-picture::before {
+        inset: -22.327% 0 0 0;
+    }
+}

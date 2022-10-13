@@ -137,6 +137,12 @@
     }
 }
 
+@media (min-width: 121em) {
+    .services {
+        grid-template-columns: auto max(36.826%, 30rem);
+    }
+}
+
 @media (hover: hover) {
     .card[data-section='services'] {
         transition: transform 500ms ease;

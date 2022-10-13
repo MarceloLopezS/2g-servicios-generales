@@ -119,3 +119,9 @@
         display: none;
     }
 }
+
+@media (min-width: 121em) {
+    .contact-us__form-container::after {
+        inset: -7.48% 0 -3.742% 0;
+    }
+}

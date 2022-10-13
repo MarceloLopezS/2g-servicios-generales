@@ -22,7 +22,7 @@ const Navbar = ({ theme, menuToggle }) => {
                             <a href='#home'>Inicio</a>
                         </li>
                         <li>
-                            <a href='#aboutUs'>Nosotros</a>
+                            <a href='#about-us'>Nosotros</a>
                         </li>
                         <li>
                             <a href='#services'>Servicios</a>
@@ -31,7 +31,7 @@ const Navbar = ({ theme, menuToggle }) => {
                             <a href='#projects'>Proyectos</a>
                         </li>
                         <li>
-                            <a href='#contactUs'>Contacto</a>
+                            <a href='#contact-us'>Contacto</a>
                         </li>
                     </ul>
                 </nav>

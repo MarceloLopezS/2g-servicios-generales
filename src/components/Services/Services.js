@@ -9,7 +9,7 @@ import serviceImg6 from '../../assets/images/construccion.jpg';
 
 const Services = () => {
     return (
-        <section className='services'>
+        <section id='services' className='services'>
             <div className='services__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-100'>
                     Nuestros Servicios

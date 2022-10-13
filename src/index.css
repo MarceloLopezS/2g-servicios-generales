@@ -170,6 +170,24 @@ input, textarea {
     outline: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--clr-accent-100);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--clr-accent-400);
+    border-radius: 0.2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-primary-400);
+}
+::-webkit-scrollbar-button {
+    height: 0.75rem;
+    background-color: var(--clr-accent-400);
+}
+
 ::placeholder {
     font-family: var(--ff-primary);
     font-size: var(--fs-100);

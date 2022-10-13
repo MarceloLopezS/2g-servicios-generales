@@ -102,7 +102,7 @@
     .contact-us__form-container {
         position: relative;
         width: 100%;
-        padding: var(--size-850) var(--size-850);
+        padding: var(--size-800) var(--size-850);
         isolation: isolate;
     }
 

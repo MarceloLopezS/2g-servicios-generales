@@ -30,6 +30,7 @@ const ContactUs = () => {
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__service'>Selecciona un servicio de interés</label>
                         <div className='contact-us__select-container'>
                             <CustomSelect optionsArray={[
+                                '-',
                                 'Construcción',
                                 'Levantamiento topográfico',
                                 'Movimiento de tierras',
@@ -42,25 +43,25 @@ const ContactUs = () => {
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__name'>Nombre completo</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__name' name='contact-us__name' typeof='text' placeholder='Por favor escribe tu nombre completo'></input>
+                            <input id='contact-us__name' name='contact-us__name' type='text' placeholder='Por favor escribe tu nombre completo'></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__email'>Email</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__email' name='contact-us__email' typeof='email' placeholder='Por favor escribe tu dirección de correo electrónico'></input>
+                            <input id='contact-us__email' name='contact-us__email' type='email' placeholder='Por favor escribe tu dirección de correo electrónico'></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__company-name'>Empresa</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__company-name' name='contact-us__company-name' typeof='text' placeholder='Por favor escribe el nombre de tu empresa'></input>
+                            <input id='contact-us__company-name' name='contact-us__company-name' type='text' placeholder='Por favor escribe el nombre de tu empresa'></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__city'>Ciudad</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__city' name='contact-us__city' typeof='text' placeholder='Por favor escribe la ciudad donde te ubicas'></input>
+                            <input id='contact-us__city' name='contact-us__city' type='text' placeholder='Por favor escribe la ciudad donde te ubicas'></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
@@ -69,7 +70,7 @@ const ContactUs = () => {
                             <textarea id='contact-us__message' name='contact-us__message' placeholder='Por favor escribe tu mensaje' ></textarea>
                         </div>
                     </div>
-                    <button className='btn' data-bg='primary'>Enviar</button>
+                    <button type='button' className='btn' data-bg='primary'>Enviar</button>
                 </form>
             </div>
         </section>

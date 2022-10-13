@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomSelect from '../CustomSelect/CustomSelect';
 import './ContactUs.css';
 
 const ContactUs = () => {
@@ -27,14 +28,16 @@ const ContactUs = () => {
                 <form className='contact-us__form'>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__service'>Selecciona un servicio de interés</label>
-                        <select id='contact-us__service' name='contact-us__service' data-custom>
-                            <option value="Construcción">Construcción</option>
-                            <option value="Levantamiento topográfico">Levantamiento topográfico</option>
-                            <option value="Movimiento de tierras">Movimiento de tierras</option>
-                            <option value="Saneamiento físico legal de predios">Saneamiento físico legal de predios</option>
-                            <option value="Sistemas de bombeo">Sistemas de bombeo</option>
-                            <option value="Sistemas de drenaje">Sistemas de drenaje</option>
-                        </select>
+                        <div className='contact-us__select-container'>
+                            <CustomSelect optionsArray={[
+                                'Construcción',
+                                'Levantamiento topográfico',
+                                'Movimiento de tierras',
+                                'Saneamiento físico legal de predios',
+                                'Sistemas de bombeo',
+                                'Sistemas de drenaje'
+                            ]}/>
+                        </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__name'>Nombre completo</label>

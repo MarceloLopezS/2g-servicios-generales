@@ -46,6 +46,15 @@
     padding-bottom: var(--size-75);
 }
 
+.contact-us__form-label[for='contact-us__service'] {
+    padding-bottom: var(--size-25);
+}
+
+.contact-us__select-container {
+    position: relative;
+    padding-block: var(--size-75);
+}
+
 .contact-us__input-container {
     position: relative;
     border-bottom: 1px solid var(--clr-primary-400);

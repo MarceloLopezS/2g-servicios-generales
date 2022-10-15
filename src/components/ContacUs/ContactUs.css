@@ -30,7 +30,7 @@
 }
 
 .contact-us__form-container {
-    padding-top: var(--size-100);
+    padding-top: var(--size-325);
     padding-bottom: var(--size-400);
 }
 
@@ -102,7 +102,7 @@
     .contact-us__form-container {
         position: relative;
         width: 100%;
-        padding: var(--size-800) var(--size-850);
+        padding: var(--size-800) min(10vw, var(--size-850));
         isolation: isolate;
     }
 
@@ -117,6 +117,12 @@
 
     .contact-us__form-container > p:first-child {
         display: none;
+    }
+}
+
+@media (min-width: 69em) and (max-width: 85.375em) {
+    .contact-us__form-container {
+        padding-block: min(5vw, var(--size-800));
     }
 }
 

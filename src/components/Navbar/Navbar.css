@@ -82,8 +82,10 @@
     transform: scale(1);
 }
 
-.navbar__links li:not(.active):hover {
-    color: var(--clr-accent-200);
+@media (hover:hover) {
+    .navbar__links li:not(.active):hover {
+        color: var(--clr-accent-200);
+    }
 }
 
 .navbar__links a {
@@ -150,6 +152,11 @@
         place-items: center;
         border-bottom: 1px solid var(--clr-accent-100);
         padding-block: max(2.765vh, var(--size-75));
+    }
+
+    .navbar__links a {
+        width: 100%;
+        text-align: center;
     }
 
     .navbar__links li.active::after {

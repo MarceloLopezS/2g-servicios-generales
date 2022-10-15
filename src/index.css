@@ -186,8 +186,10 @@ a:focus-visible {
     background: var(--clr-accent-400);
     border-radius: 0.2rem;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--clr-primary-400);
+@media (hover:hover) {
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--clr-primary-400);
+    }
 }
 ::-webkit-scrollbar-button {
     height: 0.75rem;
@@ -254,17 +256,19 @@ a:focus-visible {
     background-color: var(--clr-primary-400);
 }
 
-.btn[data-bg='primary']:hover, .btn[data-bg='primary']:focus-visible {
-    color: var(--clr-primary-400);
-    outline: 0;
-}
-
 .btn[data-bg='primary']::after {
     background-color: var(--clr-accent-100);
 }
 
-.btn[data-bg='primary']:hover::after, .btn[data-bg='primary']:focus-visible::after {
-    inset: 0;
+@media (hover:hover) {
+    .btn[data-bg='primary']:hover, .btn[data-bg='primary']:focus-visible {
+        color: var(--clr-primary-400);
+        outline: 0;
+    }
+    
+    .btn[data-bg='primary']:hover::after, .btn[data-bg='primary']:focus-visible::after {
+        inset: 0;
+    }
 }
 
 /* Utility Classes */

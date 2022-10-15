@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import AboutUs from '../components/AboutUs/AboutUs';
@@ -8,12 +8,12 @@ import ContactUs from '../components/ContacUs/ContactUs';
 
 const usePrimarySectionsOnScreen = () => {
     const homeRef = useRef(null);
-    const [orientationChange, setOrientationChange] = useState(0);
     const aboutUsRef = useRef(null);
     const servicesRef = useRef(null);
     const projectsRef = useRef(null);
     const contactUsRef = useRef(null);
-    const refsArray = [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef];
+    const [orientationChange, setOrientationChange] = useState(0);
+    const refsArray = useMemo(() => [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef], []);
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
@@ -77,7 +77,8 @@ const usePrimarySectionsOnScreen = () => {
             threshold: 0.3
         }
         const homeObserver = new IntersectionObserver(navbarReact, homeOptions);
-        if(homeRef.current) homeObserver.observe(homeRef.current);
+        const homeCurrentRef = homeRef.current;
+        if(homeCurrentRef) homeObserver.observe(homeCurrentRef);
         screenOrientation.addEventListener('change', orientationCallback);
 
         const sectionOptions = window.innerWidth >= 1008
@@ -93,10 +94,11 @@ const usePrimarySectionsOnScreen = () => {
         }
         const observedSections = refsArray.map(ref => {
             const sectionObserver = new IntersectionObserver(activateNavbarLink, sectionOptions);
-            if(ref.current) sectionObserver.observe(ref.current);
+            const currentRef = ref.current;
+            if(currentRef) sectionObserver.observe(currentRef);
 
             return {
-                currentRef : ref.current, 
+                currentRef : currentRef, 
                 observer : sectionObserver
             };
         });
@@ -105,7 +107,7 @@ const usePrimarySectionsOnScreen = () => {
             observedSections.forEach(observed => {
                 if(observed.currentRef) observed.observer.unobserve(observed.currentRef);
             })
-            if(homeRef.current) homeObserver.unobserve(homeRef.current);
+            if(homeCurrentRef) homeObserver.unobserve(homeCurrentRef);
             document.removeEventListener('scroll', scrollCallback);
             screenOrientation.removeEventListener('change', orientationCallback);
         }

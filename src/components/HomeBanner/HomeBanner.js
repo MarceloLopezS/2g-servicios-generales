@@ -21,7 +21,7 @@ const HomeBanner = ({ reference }) => {
                     <div className='banner__scroll-icon-rail'>
                         <div className='banner__scroll-icon-moving'></div>
                     </div>
-                    <span className='highlighted'><a href='#aboutUs'>Explora más</a></span>
+                    <span className='highlighted'><a href='#about-us'>Explora más</a></span>
                 </div>
             </div>
         </section>

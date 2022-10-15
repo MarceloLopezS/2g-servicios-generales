@@ -123,7 +123,7 @@
 
 @media (min-width: 69em) {
     .projects {
-        padding-bottom: var(--size-800);
+        padding-bottom: min(8vw, var(--size-800));
     }
 
     .projects__text {

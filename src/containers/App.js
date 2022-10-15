@@ -89,7 +89,7 @@ const usePrimarySectionsOnScreen = () => {
         : {
             root: null,
             rootMargin: '-25% 0px -30% 0px',
-            threshold: 0.1
+            threshold: 0.07
         }
         const observedSections = refsArray.map(ref => {
             const sectionObserver = new IntersectionObserver(activateNavbarLink, sectionOptions);

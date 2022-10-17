@@ -5,7 +5,7 @@ import serviceImg2 from '../../assets/images/movimiento-tierras.jpg';
 import serviceImg3 from '../../assets/images/saneamiento-fisico-legal-predios.jpg';
 import serviceImg4 from '../../assets/images/sistemas-drenaje.jpg';
 import serviceImg5 from '../../assets/images/evaluacion-sistemas-bombeo.jpg';
-import serviceImg6 from '../../assets/images/construccion.jpg';
+import serviceImg6 from '../../assets/images/construccion-civil.jpg';
 
 const Services = ({ reference }) => {
     return (
@@ -15,11 +15,10 @@ const Services = ({ reference }) => {
                     Nuestros Servicios
                 </h2>
                 <p className='section-primary-text highlighted text-accent-400'>
-                    Tecnología punta a disposición de nuestros clientes
+                    Tecnología y compromiso para la satisfacción de nuestros clientes
                 </p>
-                <p>
-                    <span className='highlighted text-accent-400'>Orgullosos de nuestro trabajo.</span> Contamos con equipamiento y personal adecuados para cada servicio.
-                    Trabajamos en torno a estándares de <span className='highlighted text-accent-400'>calidad, seguridad y medio ambiente</span> que nos permiten asegurar una ejecución de proyectos impecable.
+                <p className='text-align-justify'>
+                    <span className='highlighted text-accent-400'>Orgullosos de nuestro trabajo.</span> Contamos con personal calificado, equipos de alta tecnología y la mejor logística para cada servicio. Nos aseguramos de que cada prestación se ejecute de acuerdo a los estándares exigidos por ley.
                 </p>
             </div>
             <div className='services__grid'>
@@ -29,7 +28,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Levantamiento Topográfico</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <p>Garantizamos mediciones precisas y detalladas, empleando fotogrametría y geodesia.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>
@@ -38,7 +37,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Movimiento de tierras</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <p>Ejecutamos con eficacia proyectos de calidad gracias a nuestro personal, equipos y maquinaria.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>
@@ -47,7 +46,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Saneamiento físico legal de predios</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <p>Brindamos asesoría técnico legal en todo el proceso de saneamiento, asegurando su inversión.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>
@@ -56,7 +55,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Sistemas de drenaje</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <p>Diseñamos e instalamos sistemas de drenaje y ventilación, con calidad garantizada.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>
@@ -65,16 +64,16 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Sistemas de bombeo</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <p>Realizamos instalación, mantenimiento y reparación de todo tipo de bombas y tableros.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>
                     <div className='card__media'>
-                        <img loading='lazy' src={serviceImg6} alt='Construcción'></img>
+                        <img loading='lazy' src={serviceImg6} alt='Construcción Civil'></img>
                     </div>
                     <div className='card__body'>
-                        <h3>Construcción</h3>
-                        <p>Empleamos los mejores equipos y tecnología punta para asegurar un trabajo preciso y eficiente.</p>
+                        <h3>Construcción Civil</h3>
+                        <p>Ofrecemos planificación, cimenta&shy;ción, edificación, instalación de tuberías, electricidad y remodelación.</p>
                     </div>
                 </div>
             </div>

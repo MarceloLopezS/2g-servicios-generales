@@ -10,13 +10,13 @@ const AboutUs = ({ reference }) => {
                     Acerca de nosotros
                 </h2>
                 <p className='section-primary-text highlighted text-primary-400'>
-                    Operando bajo los mejores estándares desde 2013
+                    Operamos con los mejores estándares desde el año 2013
                 </p>
                 <p>
-                    <span className='highlighted text-accent-400'>Conocemos lo que hacemos.</span> Usamos las mejores tecnologías para asegurar la eficiencia y confiabilidad de nuestro trabajo.
+                    <span className='highlighted text-accent-400'>Conocemos lo que hacemos.</span> Ejecutamos proyectos de construcción e ingeniería sostenibles, utilizando las mejores tecnologías para garantizar la satisfacción y confiabilidad de nuestros clientes.
                 </p>
                 <p>
-                    Buscamos la manera de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto.</span> Gracias a nuestro compromiso, experiencia y valores, <span className='highlighted text-accent-400'>2G</span> se caracteriza por la completa satisfacción de sus clientes.
+                    Buscamos la manera de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto,</span> cumpliendo con los estándares de Calidad, Seguridad y Medio Ambiente.
                 </p>
                 <button type='button' className='btn' data-bg='primary'>Más sobre nosotros</button>
             </section>

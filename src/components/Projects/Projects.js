@@ -14,15 +14,16 @@ const Projects = ({ reference }) => {
                             Proyectos destacados
                     </h2>
                     <p className='section-primary-text highlighted text-accent-400'>
-                        La expectativa del cliente en las mejores manos
+                        Perseguimos la creación de bases sólidas, confiables y resistentes
                     </p>
                 </div>
                 <div className='text-neutral-100 text-align-justify'>
                     <p>
-                        En <span className='highlighted text-accent-400'>2G</span>, el compromiso es nuestro mejor valor y nuestro mayor orgullo.
+                        En <span className='highlighted text-accent-400'>2G</span>, estamos comprometidos con dar las mejores soluciones; generando confianza y fidelidad en nuestros clientes.
                     </p>
                     <p>
-                        Contamos con las capacidades humanas, profesionales y tecnológicas para asegurar un <span className='highlighted text-accent-400'>proyecto alineado al designio del cliente</span>, siguiendo siempre los estándares de calidad, seguridad y medio ambiente.
+                        Contamos con un equipo profesional altamente calificado y especializado para cada servicio que, 
+                        junto con nuestros equipos de alta tecnología, nos permiten alcanzar la excelencia operacional de cada proyecto.
                     </p>
                     <p className='padding-top-150'>
                         Nuestro profesionalismo y trato cordial están presentes en todo momento, velando por una relación positiva y proactiva con el fin de mantener siempre los acuerdos de <span className='highlighted text-accent-400'>presupuesto, desarrollo y tiempo.</span>
@@ -35,10 +36,10 @@ const Projects = ({ reference }) => {
                         <img loading='lazy' src={projectImg1} alt='Remodelación Costa del Sol Cajamarca - Wyndham'></img>
                     </div>
                     <div className='card__body'>
-                        <p className='highlighted'>Construcción</p>
-                        <h3>Costa del Sol Cajamarca - Wyndham</h3>
+                        <p className='highlighted'>Diseño - Construcción</p>
+                        <h3>Costa del Sol Wyndham</h3>
                         <p>Caso de estudio</p>
-                        <p>Remodelación de piso salón y habitaciones del Hotel Costa del Sol - Wyndham</p>
+                        <p>Remodelación general de piso salón y habitaciones del Hotel Costa del Sol Wyndham - Cajamarca</p>
                         <button type='button' className='btn' data-bg='primary'>Más sobre el proyecto</button>
                     </div>
                 </div>
@@ -66,7 +67,7 @@ const Projects = ({ reference }) => {
                         <p className='highlighted'>Construcción</p>
                         <h3>Servicio Nacional Meteorología e Hidrología</h3>
                         <p>Caso de estudio</p>
-                        <p>Reubicación, colocación de cerco perimétrico y mantenimiento preventivo de la Estación Meteorológica Automática Chugur</p>
+                        <p>Reubicación, colocación de cerco perimétrico y mantenimiento preventivo de la Estación Meteorológica Automática Chugur - Cajamarca</p>
                         <button type='button' className='btn' data-bg='primary'>Más sobre el proyecto</button>
                     </div>
                 </div>
@@ -75,10 +76,10 @@ const Projects = ({ reference }) => {
                         <img loading='lazy' src={projectImg4} alt='Levantamiento topográfico'></img>
                     </div>
                     <div className='card__body'>
-                        <p className='highlighted'>Construcción</p>
-                        <h3>Divino Salvador S.A.</h3>
+                        <p className='highlighted'>Diseño - Construcción</p>
+                        <h3>Minera Yanacocha</h3>
                         <p>Caso de estudio</p>
-                        <p>Construcción de muro perimétrico sub - estación de Rebombeo Cerro Negro (Materiales y Agregados).</p> <p>Fabricación de estructuras metálicas galvanizadas según diseño.</p>
+                        <p>Evaluación del sistema de tanques de rebombeo de agua en el tajo tapado Oeste de Minera Yanacocha - Cajamarca</p>
                         <button type='button' className='btn' data-bg='primary'>Más sobre el proyecto</button>
                     </div>
                 </div>

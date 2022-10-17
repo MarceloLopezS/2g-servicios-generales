@@ -50,7 +50,7 @@
 }
 
 .card[data-section='services'] .card__body {
-    --padding: var(--size-150);
+    --padding: var(--size-100);
 
     position: absolute;
     color: var(--clr-neutral-100);

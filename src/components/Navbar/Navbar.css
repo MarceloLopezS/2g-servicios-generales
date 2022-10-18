@@ -26,10 +26,28 @@
 }
 
 .navbar__container {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar__certificate {
+    position: absolute;
+    width: 6.5em;
+    top: 0;
+    left: 0;
+    transform: translateY(-20%);
+    transition: opacity 500ms ease-in;
+}
+
+.navbar__certificate[data-show='true'] {
+    opacity: 1;
+}
+
+.navbar__certificate[data-show='false'] {
+    opacity: 0;
 }
 
 .navbar__brand {

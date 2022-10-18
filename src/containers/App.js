@@ -17,6 +17,7 @@ const usePrimarySectionsOnScreen = () => {
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
+        const certificateLogo = navbar.querySelector('.navbar__certificate');
         const brand = navbar.querySelector('.navbar__brand');
         const navLinks = navbar.querySelectorAll('a');
         let lastScrollTop;
@@ -52,8 +53,10 @@ const usePrimarySectionsOnScreen = () => {
                     : link.parentElement.classList.remove('active')
                 })
                 if (window.innerWidth >= 1008) {
+                    certificateLogo.setAttribute('data-show','true');
                     brand.setAttribute('data-show','false');
                 } else {
+                    certificateLogo.setAttribute('data-show','false');
                     brand.setAttribute('data-show','true');
                 }
                 navbar.removeAttribute('data-theme');
@@ -62,10 +65,12 @@ const usePrimarySectionsOnScreen = () => {
             } else {
                 if (window.innerWidth >= 1008) {
                     navbar.setAttribute('data-theme', 'inverse');
+                    certificateLogo.setAttribute('data-show','false');
                     brand.setAttribute('data-show','true');
                     document.addEventListener('scroll', scrollCallback);
                 } else {
                     navbar.setAttribute('data-slide','down');
+                    certificateLogo.setAttribute('data-show','false');
                     brand.setAttribute('data-show','true');
                 }
             }

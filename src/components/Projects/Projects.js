@@ -3,7 +3,7 @@ import './Projects.css';
 import projectImg1 from '../../assets/images/remodelacion-hotel-costa-del-sol.jpeg';
 import projectImg2 from '../../assets/images/proyecto-inmobiliario.jpeg';
 import projectImg3 from '../../assets/images/estacion-meteorologica.jpeg';
-import projectImg4 from '../../assets/images/muro-perimetrico.jpeg';
+import projectImg4 from '../../assets/images/sistema-rebombeo.jpeg';
 
 const Projects = ({ reference }) => {
     return (
@@ -73,7 +73,7 @@ const Projects = ({ reference }) => {
                 </div>
                 <div className='card' data-section='projects'>
                     <div className='card__media'>
-                        <img loading='lazy' src={projectImg4} alt='Levantamiento topográfico'></img>
+                        <img loading='lazy' src={projectImg4} alt='Sistema de rebombeo - Minera Yanaocha'></img>
                     </div>
                     <div className='card__body'>
                         <p className='highlighted'>Diseño - Construcción</p>

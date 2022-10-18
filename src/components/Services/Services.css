@@ -144,6 +144,12 @@
     }
 }
 
+@media (orientation: landscape) {
+    .services {
+        padding-block: var(--size-200);
+    }
+}
+
 @media (hover: hover) {
     .card[data-section='services'] {
         transition: transform 500ms ease;

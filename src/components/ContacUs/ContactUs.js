@@ -5,7 +5,7 @@ import './ContactUs.css';
 const ContactUs = ({ reference }) => {
     return (
         <section id='contact-us' className='contact-us' ref={reference}>
-            <div className='contact-us__text container'>
+            <section className='contact-us__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-900'>Contacta con nosotros</h2>
                 <p className='section-primary-text highlighted text-primary-400'>Estamos a tu servicio</p>
                 <div className='contact-us__info'>
@@ -22,8 +22,8 @@ const ContactUs = ({ reference }) => {
                     <p>consultas@2gserviciosgenerales.com</p>
                     <p>gerencia@2gserviciosgenerales.com</p>
                 </div>
-            </div>
-            <div className='contact-us__form-container container'>
+            </section>
+            <section className='contact-us__form-container container'>
                 <p className='contact-us__info-title'>Envíanos un mensaje:</p>
                 <form className='contact-us__form'>
                     <div className='contact-us__form-group'>
@@ -72,7 +72,7 @@ const ContactUs = ({ reference }) => {
                     </div>
                     <button type='button' className='btn' data-bg='primary'>Enviar</button>
                 </form>
-            </div>
+            </section>
         </section>
     )
 }

@@ -10,7 +10,7 @@ import serviceImg6 from '../../assets/images/construccion-civil.jpg';
 const Services = ({ reference }) => {
     return (
         <section id='services' className='services' ref={reference}>
-            <div className='services__text container'>
+            <section className='services__text container'>
                 <h2 className='fs-section-title highlighted text-neutral-100'>
                     Nuestros Servicios
                 </h2>
@@ -20,8 +20,8 @@ const Services = ({ reference }) => {
                 <p className='text-align-justify'>
                     <span className='highlighted text-accent-400'>Orgullosos de nuestro trabajo.</span> Contamos con personal calificado, equipos de alta tecnología y la mejor logística para cada servicio. Nos aseguramos de que cada prestación se ejecute de acuerdo a los estándares exigidos por ley.
                 </p>
-            </div>
-            <div className='services__grid'>
+            </section>
+            <section className='services__grid'>
                 <div className='card' data-section='services'>
                     <div className='card__media'>
                         <img loading='lazy' src={serviceImg1} alt='Levantamiento topográfico'></img>
@@ -76,7 +76,7 @@ const Services = ({ reference }) => {
                         <p>Ofrecemos planificación, cimenta&shy;ción, edificación, instalación de tuberías, electricidad y remodelación.</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
     )
 }

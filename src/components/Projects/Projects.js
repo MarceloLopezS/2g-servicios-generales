@@ -8,7 +8,7 @@ import projectImg4 from '../../assets/images/muro-perimetrico.jpeg';
 const Projects = ({ reference }) => {
     return (
         <section id='projects' className='projects' ref={reference}>
-            <div className='projects__text container'>
+            <section className='projects__text container'>
                 <div>
                     <h2 className='fs-section-title highlighted text-neutral-100'>
                             Proyectos destacados
@@ -29,8 +29,8 @@ const Projects = ({ reference }) => {
                         Nuestro profesionalismo y trato cordial están presentes en todo momento, velando por una relación positiva y proactiva con el fin de mantener siempre los acuerdos de <span className='highlighted text-accent-400'>presupuesto, desarrollo y tiempo.</span>
                     </p>
                 </div>
-            </div>
-            <div className='projects__grid'>
+            </section>
+            <section className='projects__grid'>
                 <div className='card' data-section='projects'>
                     <div className='card__media'>
                         <img loading='lazy' src={projectImg1} alt='Remodelación Costa del Sol Cajamarca - Wyndham'></img>
@@ -83,7 +83,7 @@ const Projects = ({ reference }) => {
                         <button type='button' className='btn' data-bg='primary'>Más sobre el proyecto</button>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
     )
 }

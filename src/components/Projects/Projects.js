@@ -3,7 +3,7 @@ import './Projects.css';
 import projectImg1 from '../../assets/images/remodelacion-hotel-costa-del-sol.jpeg';
 import projectImg2 from '../../assets/images/proyecto-inmobiliario.jpeg';
 import projectImg3 from '../../assets/images/estacion-meteorologica.jpeg';
-import projectImg4 from '../../assets/images/sistema-rebombeo.jpeg';
+import projectImg4 from '../../assets/images/diseño-sistema-rebombeo.jpeg';
 
 const Projects = ({ reference }) => {
     return (
@@ -76,7 +76,7 @@ const Projects = ({ reference }) => {
                         <img loading='lazy' src={projectImg4} alt='Sistema de rebombeo - Minera Yanaocha'></img>
                     </div>
                     <div className='card__body'>
-                        <p className='highlighted'>Diseño - Construcción</p>
+                        <p className='highlighted'>Diseño</p>
                         <h3>Minera Yanacocha</h3>
                         <p>Caso de estudio</p>
                         <p>Evaluación del sistema de tanques de rebombeo de agua en el tajo tapado Oeste de Minera Yanacocha - Cajamarca</p>

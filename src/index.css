@@ -45,17 +45,17 @@
     --fs-900: 8rem;
 
     --fs-body: var(--fs-250);
-    --fs-nav-links: var(--fs-400);
-    --fs-banner-title: clamp(var(--fs-550), 10vw , var(--fs-800));
-    --fs-title-phrase: var(--fs-350);
-    --fs-section-title: var(--fs-600);
+    --fs-nav-links: clamp(var(--fs-50), 1.1vw, var(--fs-250));
+    --fs-banner-title: clamp(var(--fs-550), 5.5vw , var(--fs-800));
+    --fs-section-title: var(--fs-350);
+    --fs-section-phrase:  clamp(var(--fs-550), 4.5vw , var(--fs-700));
     --fs-picture-info: var(--fs-100);
     --fs-project-title: var(--fs-600);
     --fs-cta-title: var(--fs-650);
     --fs-btn: var(--fs-100);
     --fs-carousel-indicator: var(--fs-100);
-    --fs-carousel-number: var(--fs-900);
-    --fs-carousel-description: var(--fs-350);
+    --fs-carousel-number: clamp(var(--fs-700), 7vw , var(--fs-900));
+    --fs-carousel-description: clamp(var(--fs-200), 1.2vw , var(--fs-350));
 
     --size-10: 0.15rem;
     --size-15: 0.35rem;
@@ -78,17 +78,6 @@
     --size-850: 13rem;
     --size-900: 17rem;
     --size-950: 20rem;
-}
-
-@media (min-width: 63em) {
-    :root {
-        --fs-nav-links: var(--fs-350);
-        --fs-title-phrase: var(--fs-350);
-        --fs-section-title: var(--fs-700);
-        --fs-project-title: var(--fs-600);
-        --fs-cta-title: var(--fs-700);
-        --fs-btn: var(--fs-200);
-    }
 }
 
 /* CSS Reset */
@@ -327,7 +316,7 @@ a:focus-visible {
     font-size: var(--fs-banner-title);
 }
 .fs-section-title {
-    font-size: var(--fs-title-phrase);
+    font-size: var(--fs-section-title);
 }
 .fs-picture-info {
     font-size: var(--fs-50);
@@ -396,7 +385,7 @@ a:focus-visible {
 }
 
 .section-primary-text {
-    font-size: var(--fs-section-title);
+    font-size: var(--fs-section-phrase);
     line-height: 1.1;
     padding-top: var(--size-25);
     padding-bottom: var(--size-150);

@@ -27,7 +27,7 @@
 }
 
 .banner__brand {
-    width: var(--size-850);
+    width: clamp(var(--size-800), 17vw, var(--size-900));
     padding-bottom: 1.5rem;
 }
 
@@ -88,12 +88,6 @@
     100% {
         opacity: 0;
         top: 86%;
-    }
-}
-
-@media (min-width: 69em) {
-    .banner__brand {
-        width: var(--size-900);
     }
 }
 

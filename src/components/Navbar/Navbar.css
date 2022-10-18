@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    font-size: clamp(var(--fs-50), 1.1vw, var(--fs-250));
+    font-size: var(--fs-nav-links);
     text-transform: uppercase;
     color: var(--clr-neutral-100);
     background-color: transparent;
@@ -112,7 +112,6 @@
 
 @media (max-width: 63em) {
     .navbar {
-        font-size: var(--fs-250);
         color: var(--clr-primary-400);
         background-color: var(--clr-neutral-100);
         padding-block: 0;

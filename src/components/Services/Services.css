@@ -95,7 +95,7 @@
     .services__grid {
         width: 100%;
         gap: var(--size-50);
-        padding: var(--size-850) var(--size-600);
+        padding: var(--size-800) var(--size-600);
         grid-area: services-grid;
     }
 
@@ -120,8 +120,9 @@
 
 @media (min-width: 69em) and (max-width: 85.375em) {
     .services {
-        padding-block: var(--size-500);
+        padding-block: 0;
     }
+    
     .services__grid {
         gap: 0.2rem;
         padding: 0 var(--size-200);

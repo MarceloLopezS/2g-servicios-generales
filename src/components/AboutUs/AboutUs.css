@@ -41,8 +41,8 @@
     left: 0;
     opacity: 0;
     transform: translateX(-100%);
-    transition-property: opacity, transform;
-    transition-duration: 200ms, 500ms;
+    transition-property: opacity, transform, -webkit-transform;
+    transition-duration: 200ms, 500ms, 500ms;
     transition-timing-function: ease-in;
 }
 

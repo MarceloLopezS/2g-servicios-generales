@@ -3,17 +3,16 @@ import './AboutUs.css';
 import Carousel from '../Carousel/Carousel';
 
 const AboutUs = ({ reference }) => {
-    const mainTextRef = useRef();
-    const complementTextRef = useRef();
-    const toggleComplementText = () => {
-        mainTextRef.current.toggleAttribute('data-hide');
-        complementTextRef.current.toggleAttribute('data-show');
+    const toggleComplementText = (event) => {
+        const buttonParent = event.target.parentElement;
+        const slides = buttonParent.parentElement.querySelectorAll('.text-slide');
+        slides.forEach(slide => slide.toggleAttribute('data-show'));
     }
     
     return (
         <section id='about-us' className='about-us' ref={reference}>
             <section className='about-us__text container'>
-                <div className='text-slide main' ref={mainTextRef}>
+                <div className='text-slide main' data-show>
                     <h2 className='fs-section-title highlighted text-neutral-900'>
                         Acerca de nosotros
                     </h2>
@@ -28,7 +27,7 @@ const AboutUs = ({ reference }) => {
                     </p>
                     <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Más sobre nosotros</button>
                 </div>
-                <div className='text-slide complement | text-align-justify' ref={complementTextRef}>
+                <div className='text-slide complement | text-align-justify'>
                     <h3 className='highlighted text-primary-400'>Nosotros</h3>
                     <p>Somos <span className='ff-primary'>2G SERVICIOS GENERALES S.R.L</span>, una empresa dedicada a la ejecución de proyectos de construcción e ingeniería con más de diez años de experiencia en: sistemas de rebombeo, levantamientos topográficos, saneamiento físico legal de predios, movimiento de tierras, sistemas de drenaje, interior y exterior de edificaciones, cerco perimétrico y alquiler de maquinaria liviana para minería.</p>
                     <h3 className='highlighted text-primary-400'>Nuestra visión</h3>

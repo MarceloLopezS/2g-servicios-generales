@@ -7,16 +7,17 @@ import Projects from '../components/Projects/Projects';
 import ContactUs from '../components/ContacUs/ContactUs';
 
 const usePrimarySectionsOnScreen = () => {
-    const homeRef = useRef(null);
-    const aboutUsRef = useRef(null);
-    const servicesRef = useRef(null);
-    const projectsRef = useRef(null);
-    const contactUsRef = useRef(null);
+    const navbarRef = useRef();
+    const homeRef = useRef();
+    const aboutUsRef = useRef();
+    const servicesRef = useRef();
+    const projectsRef = useRef();
+    const contactUsRef = useRef();
     const [orientationChange, setOrientationChange] = useState(0);
-    const refsArray = useMemo(() => [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef], []);
+    const sectionsArray = useMemo(() => [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef], []);
 
     useEffect(() => {
-        const navbar = document.querySelector('.navbar');
+        const navbar = navbarRef.current;
         const certificateLogo = navbar.querySelector('.navbar__certificate');
         const brand = navbar.querySelector('.navbar__brand');
         const navLinks = navbar.querySelectorAll('a');
@@ -97,7 +98,7 @@ const usePrimarySectionsOnScreen = () => {
             rootMargin: '-25% 0px -30% 0px',
             threshold: 0.07
         }
-        const observedSections = refsArray.map(ref => {
+        const observedSections = sectionsArray.map(ref => {
             const sectionObserver = new IntersectionObserver(activateNavbarLink, sectionOptions);
             const currentRef = ref.current;
             if(currentRef) sectionObserver.observe(currentRef);
@@ -116,18 +117,18 @@ const usePrimarySectionsOnScreen = () => {
             document.removeEventListener('scroll', scrollCallback);
             screenOrientation.removeEventListener('change', orientationCallback);
         }
-    }, [refsArray, orientationChange]);
+    }, [navbarRef, sectionsArray, orientationChange]);
 
-    return refsArray;
+    return [...sectionsArray, navbarRef];
 }
 
 const App = () => {
-    const [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef] = usePrimarySectionsOnScreen();
+    const [homeRef, aboutUsRef, servicesRef, projectsRef, contactUsRef, navbarRef] = usePrimarySectionsOnScreen();
 
     return (
         <React.StrictMode>
             <header>
-                <Navbar />
+                <Navbar reference={navbarRef}/>
             </header>
             <main>
                 <HomeBanner reference={homeRef}/>

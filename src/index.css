@@ -38,6 +38,7 @@
     --fs-400: 1.625rem;
     --fs-500: 2rem;
     --fs-550: 2.45rem;
+    --fs-575: 2.75rem;
     --fs-600: 3rem;
     --fs-650: 3.125rem;
     --fs-700: 4rem;
@@ -46,9 +47,9 @@
 
     --fs-body: var(--fs-250);
     --fs-nav-links: clamp(var(--fs-50), 1.1vw, var(--fs-250));
-    --fs-banner-title: clamp(var(--fs-550), 5.5vw , var(--fs-800));
+    --fs-banner-title: clamp(var(--fs-575), 5.5vw , var(--fs-800));
     --fs-section-title: var(--fs-350);
-    --fs-section-phrase:  clamp(var(--fs-550), 4.5vw , var(--fs-700));
+    --fs-section-phrase:  clamp(var(--fs-575), 4.5vw , var(--fs-700));
     --fs-picture-info: var(--fs-100);
     --fs-project-title: var(--fs-600);
     --fs-cta-title: var(--fs-650);

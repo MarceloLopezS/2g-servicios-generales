@@ -2,21 +2,61 @@
     display: grid;
     place-items: center;
     background-color: var(--clr-neutral-100);
+    isolation: isolate;
 }
 
 .about-us__text {
-    display: grid;
+    position: relative;
     max-width: 45ch;
-    padding-block: var(--size-400);
-}
-
-.about-us__text p:last-of-type {
-    padding-top: var(--size-150);
-    padding-bottom: var(--size-150);
+    margin-block: var(--size-400);
 }
 
 .about-us__text button {
     padding-block: var(--size-50);
+    margin-top: var(--size-150);
+}
+
+.about-us__text .main, .about-us__text .complement {
+    display: grid;
+    background-color: var(--clr-neutral-100);
+}
+
+.about-us__text .main p:last-of-type {
+    padding-top: var(--size-150);
+}
+
+.about-us__text .main {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.about-us__text .main[data-hide] {
+    opacity: 0;
+}
+
+.about-us__text .complement {
+    position: absolute;
+    font-size: clamp(var(--fs-100), 1.39vw, var(--fs-250));
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition-property: opacity, transform;
+    transition-duration: 200ms, 500ms;
+    transition-timing-function: ease-in;
+}
+
+.about-us__text .complement[data-show] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-us__text .complement h3:first-of-type {
+    padding-top: 0;
+}
+
+.about-us__text .complement h3 {
+    padding-block: var(--size-75) var(--size-25);
 }
 
 .about-us__main-picture, .about-us__statistics {
@@ -30,15 +70,18 @@
     }
 
     .about-us__text {
-        display: flex;
-        flex-direction: column;
         max-width: 50ch;
         grid-row: span 2;
     }
+    
+    .about-us__text .main, .about-us__text .complement {
+        display: flex;
+        flex-direction: column;
+    }
 
     .about-us__text button {
-        padding-inline: var(--size-250);
         align-self: flex-start;
+        padding-inline: var(--size-250);
     }
 
     .about-us__main-picture {

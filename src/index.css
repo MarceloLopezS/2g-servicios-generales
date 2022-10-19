@@ -46,7 +46,7 @@
     --fs-900: 8rem;
 
     --fs-body: var(--fs-250);
-    --fs-nav-links: clamp(var(--fs-50), 1.1vw, var(--fs-250));
+    --fs-nav-links: var(--fs-250);
     --fs-banner-title: clamp(var(--fs-575), 5.5vw , var(--fs-800));
     --fs-section-title: var(--fs-350);
     --fs-section-phrase:  clamp(var(--fs-575), 4.5vw , var(--fs-700));
@@ -79,6 +79,12 @@
     --size-850: 13rem;
     --size-900: 17rem;
     --size-950: 20rem;
+}
+
+@media (min-width: 69em) {
+    :root {
+        --fs-nav-links: clamp(var(--fs-50), 1.1vw, var(--fs-250));
+    }
 }
 
 /* CSS Reset */

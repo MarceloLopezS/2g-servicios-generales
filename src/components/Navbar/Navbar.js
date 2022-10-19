@@ -19,9 +19,9 @@ const menuToggle = () => {
     }
 }
 
-const Navbar = () => {
+const Navbar = ({ reference }) => {
     return (
-        <div className='navbar'>
+        <div className='navbar' ref={reference}>
             <div className='container navbar__container'>
                 <img className='navbar__certificate' src={certificateLogo} alt='Logo Cámara de Comercio y Producción'></img>
                 <img className='navbar__brand' src={brandLogo} alt='2G Logo'></img>

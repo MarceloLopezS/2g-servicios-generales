@@ -124,6 +124,7 @@
     }
 
     .navbar__container {
+        position: static;
         height: auto;
         background-color: inherit;
     }

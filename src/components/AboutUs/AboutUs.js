@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './AboutUs.css';
 import Carousel from '../Carousel/Carousel';
 

@@ -31,7 +31,7 @@ const Projects = ({ reference }) => {
                         junto con nuestros equipos de alta tecnología, nos permiten alcanzar la excelencia operacional de cada proyecto.
                     </p>
                     <p className='padding-top-150'>
-                        Nuestro profesionalismo y trato cordial están presentes en todo momento, velando por una relación positiva y proactiva con el fin de mantener siempre los acuerdos de <span className='highlighted text-accent-400'>presupuesto, desarrollo y tiempo.</span>
+                        Nuestro profesionalismo y trato cordial están presentes en todo momento, velando por una relación positiva y proactiva, con el fin de mantener siempre los acuerdos de <span className='highlighted text-accent-400'>presupuesto, desarrollo y tiempo.</span>
                     </p>
                 </div>
             </section>
@@ -48,7 +48,7 @@ const Projects = ({ reference }) => {
                         <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Más sobre el proyecto</button>
                     </div>
                     <div className='card__body complement | text-align-justify'>
-                        <p>La empresa hotelera Costa del Sol - Wyndham, es reconocida en la ciudad de Cajamarca y a nivel nacional. Cuenta con 11 sucursales, siendo una de las cadenas hoteleras más importante del país.</p>
+                        <p>La empresa hotelera Costa del Sol - Wyndham, es reconocida en la ciudad de Cajamarca y a nivel nacional. Cuenta con 11 sucursales, siendo una de las cadenas hoteleras más importantes del país.</p>
                         <p>El proyecto consistió en la remodelación de espacios interiores del hotel, realizándose trabajos de: instalación del piso vinil, pintado de interiores, trabajos eléctricos y acabados finales.</p>
                         <p>Este proyecto fue entregado cumpliendo los estándares de calidad, seguridad y medio ambiente; los cuales son transcendentales para la satisfacción de nuestros clientes.</p>
                         <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Atrás</button>
@@ -71,7 +71,7 @@ const Projects = ({ reference }) => {
                     </div>
                     <div className='card__body complement | text-align-justify'>
                         <p>Vica Work Global S.A.C es una empresa inmobiliaria reconocida en la ciudad de Cajamarca, con inicio de actividades en el año 2014.</p>
-                        <p>El proyecto consistió en la preparación de terreno para una próxima residencial, realizándose los trabajos de: levantamiento topográfico, preparación del terreno, corte, relleno y trazado, demarcación de áreas comunes e instalación de un portón de ingreso.</p>
+                        <p>El proyecto consistió en el acondicionamiento del área para una próxima residencial, realizándose trabajos de: levantamiento topográfico, preparación del terreno, corte, relleno y trazado, demarcación de áreas comunes e instalación de un portón de ingreso.</p>
                         <p>El cliente expresó su satisfacción con los trabajos y el servicio realizado, reconociendo nuestro compromiso y trayectoria.</p>
                         <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Atrás</button>
                     </div>

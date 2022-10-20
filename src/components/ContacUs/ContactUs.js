@@ -10,12 +10,12 @@ const ContactUs = ({ reference }) => {
                 <p className='section-primary-text highlighted text-primary-400'>Estamos a tu servicio</p>
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Dirección:</p>
-                    <p>Jr. San Sebastián 557 - Cajamarca - Cajamarca</p>
+                    <p>Jr. San Sebastián 557 - Urb. Casurco - Cajamarca - Cajamarca</p>
                 </div>
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Teléfonos:</p>
-                    <p>076 999 999</p>
-                    <p>976 999 999</p>
+                    <p>924 674 701</p>
+                    <p>966 869 663</p>
                 </div>
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Correos:</p>

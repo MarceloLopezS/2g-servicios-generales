@@ -26,7 +26,7 @@ const Projects = ({ reference }) => {
                     <p>
                         En <span className='highlighted text-accent-400'>2G</span>, estamos comprometidos con dar las mejores soluciones; generando confianza y fidelidad en nuestros clientes.
                     </p>
-                    <p>
+                    <p className='padding-top-150'>
                         Contamos con un equipo profesional altamente calificado y especializado para cada servicio que, 
                         junto con nuestros equipos de alta tecnología, nos permiten alcanzar la excelencia operacional de cada proyecto.
                     </p>
@@ -107,7 +107,7 @@ const Projects = ({ reference }) => {
                     </div>
                     <div className='card__body complement | text-align-justify'>
                         <p>Minera Yanacocha es una mina aurífera considerada la más grande de América del Sur y la segunda a nivel mundial.</p>
-                        <p>El proyecto tuvo la finalidad de evaluar el funcionamiento hidráulico del sistema de tanques de rebombeo del tajo (Tapado Oeste), haciendo uso de información topográfica y cartográfica. Se obtuvieron referencias a tiempos inoperativos; y, en consecuencia, presentamos una alternativa de solución de ingeniería, obteniendo importantes mejoras en la optimización de drenaje.</p>
+                        <p>El proyecto tuvo la finalidad de evaluar el funcionamiento hidráulico del sistema de tanques de rebombeo del tajo (Tapado Oeste), haciendo uso de información topográfica y cartográfica. Se obtuvieron referencias a tiempos inoperativos y, en consecuencia, presentamos una alternativa de solución de ingeniería, obteniendo importantes mejoras en la optimización de drenaje.</p>
                         <p>El proyecto generó la satisfacción nuestra y del cliente, considerándose un éxito por ambas partes.</p>
                         <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Atrás</button>
                     </div>

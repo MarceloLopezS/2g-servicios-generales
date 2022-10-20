@@ -19,17 +19,17 @@ const AboutUs = ({ reference }) => {
                     <p className='section-primary-text highlighted text-primary-400'>
                         Operamos con los mejores estándares desde el año 2013
                     </p>
-                    <p>
+                    <p className='text-align-justify'>
                         <span className='highlighted text-accent-400'>Conocemos lo que hacemos.</span> Ejecutamos proyectos de construcción e ingeniería sostenibles, utilizando las mejores tecnologías para garantizar la satisfacción y confiabilidad de nuestros clientes.
                     </p>
-                    <p>
+                    <p className='text-align-justify'>
                         Buscamos la manera de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto,</span> cumpliendo con los estándares de Calidad, Seguridad y Medio Ambiente.
                     </p>
                     <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Más sobre nosotros</button>
                 </div>
                 <div className='text-slide complement | text-align-justify'>
                     <h3 className='highlighted text-primary-400'>Nosotros</h3>
-                    <p>Somos <span className='ff-primary'>2G SERVICIOS GENERALES S.R.L</span>, una empresa dedicada a la ejecución de proyectos de construcción e ingeniería con más de diez años de experiencia en: sistemas de rebombeo, levantamientos topográficos, saneamiento físico legal de predios, movimiento de tierras, sistemas de drenaje, interior y exterior de edificaciones, cerco perimétrico y alquiler de maquinaria liviana para minería.</p>
+                    <p>Somos <span className='ff-primary'>2G SERVICIOS GENERALES S.R.L</span>, una empresa dedicada a la ejecución de proyectos de construcción e ingeniería con más de diez años de experiencia en: sistemas de rebombeo, levantamientos topográficos, saneamiento físico legal de predios, movimiento de tierras, sistemas de drenaje, trabajo en interiores y exteriores de edificaciones, cerco perimétrico y alquiler de maquinaria liviana para minería.</p>
                     <h3 className='highlighted text-primary-400'>Nuestra visión</h3>
                     <p>Ser reconocidos a nivel nacional como una empresa líder, sólida e innovadora en el sector construcción, brindando servicios que satisfacen íntegramente las expectativas de nuestros clientes, basándose en altos estándares de calidad, seguridad y cuidado del medio ambiente.</p>
                     <h3 className='highlighted text-primary-400'>Nuestra misión</h3>

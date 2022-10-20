@@ -14,8 +14,8 @@ const ContactUs = ({ reference }) => {
                 </div>
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Teléfonos:</p>
-                    <p>924 674 701</p>
-                    <p>966 869 663</p>
+                    <p>+51 924 674 701</p>
+                    <p>+51 966 869 663</p>
                 </div>
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Correos:</p>

@@ -78,12 +78,14 @@ const usePrimarySectionsOnScreen = () => {
                 navbar.setAttribute('data-slide','down');
                 clearTimeout(navbarTimeout);
                 document.removeEventListener('scroll', scrollCallback);
+                navbar.removeEventListener('mouseleave', setNavbarTimeout);
             } else {
                 if (window.innerWidth >= 1008) {
                     navbar.setAttribute('data-theme', 'inverse');
                     certificateLogo.setAttribute('data-show','false');
                     brand.setAttribute('data-show','true');
                     document.addEventListener('scroll', scrollCallback);
+                    navbar.addEventListener('mouseleave', setNavbarTimeout);
                 } else {
                     navbar.setAttribute('data-slide','down');
                     certificateLogo.setAttribute('data-show','false');
@@ -100,7 +102,6 @@ const usePrimarySectionsOnScreen = () => {
         const homeObserver = new IntersectionObserver(navbarReact, homeOptions);
         const homeCurrentRef = homeRef.current;
         if(homeCurrentRef) homeObserver.observe(homeCurrentRef);
-        navbar.addEventListener('mouseleave', setNavbarTimeout);
         screenOrientation.addEventListener('change', orientationCallback);
 
         const sectionOptions = window.innerWidth >= 1008

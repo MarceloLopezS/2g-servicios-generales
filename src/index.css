@@ -8,7 +8,7 @@
     --clr-accent-100: hsl(212, 0%, 80%);
     --clr-accent-200: hsl(212, 0%, 55%);
     --clr-accent-400: hsl(212, 30%, 50%);
-    --clr-accent-800: hsl(212, 70%, 10%);
+    --clr-accent-800: hsl(212, 70%, 12%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-200: hsl(0, 10%, 92%);
@@ -61,6 +61,7 @@
 
     --size-10: 0.15rem;
     --size-15: 0.35rem;
+    --size-20: 0.5rem;
     --size-25: 0.75rem;
     --size-50: 1rem;
     --size-75: 1.25rem;
@@ -75,6 +76,7 @@
     --size-400: 6.25rem;
     --size-450: 6.5rem;
     --size-500: 7.8rem;
+    --size-575: 8rem;
     --size-600: 8.75rem;
     --size-700: 9.7rem;
     --size-800: 10.3rem;
@@ -167,6 +169,10 @@ input, textarea {
     width: 100%;
     border: 0;
     outline: 0;
+}
+
+a {
+    transition: color 300ms ease-in;
 }
 
 a:focus-visible {

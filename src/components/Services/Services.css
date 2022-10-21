@@ -129,11 +129,11 @@
         grid-area: services-grid;
     }
 
-    .card[data-section='services'] .card__body h3 {
-        font-size: var(--fs-100);
+    .card[data-section='services'] .card__body {
+        --padding: var(--size-25)
     }
 
-    .card[data-section='services'] .card__body p {
+    .card[data-section='services'] .card__body h3, .card[data-section='services'] .card__body p {
         font-size: var(--fs-50);
     }
 }

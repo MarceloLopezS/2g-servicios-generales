@@ -30,7 +30,6 @@ const usePrimarySectionsOnScreen = () => {
             }, 2000)
         }
         const onNavbarHoverIn = () => {
-            console.log('hover in');
             clearTimeout(navbarTimeout);
         }
         const scrollCallback = ()  => {

@@ -6,13 +6,12 @@
     background-color: var(--clr-accent-800);
     color: var(--clr-accent-100);
     padding-inline: var(--size-300) var(--size-400);
-    padding-block: var(--size-600) var(--size-400);
+    padding-block: min(7.1vw, var(--size-600)) min(5vw, var(--size-400));
     margin-top: min(7vw, var(--size-575));
 }
 
 .footer__social {
     display: grid;
-    place-items: center;
     max-width: var(--size-850);
     color: var(--clr-neutral-100);
     gap: var(--size-75);
@@ -21,7 +20,7 @@
     
 .footer__social .social-icons {
     display: flex;
-    gap: var(--size-50);
+    gap: var(--size-25);
 }
     
 .footer__social .social-icon {
@@ -34,7 +33,7 @@
 }
 
 .footer__nav {
-    font-size: var(--fs-100);
+    font-size: clamp(var(--fs-75), 1vw ,var(--fs-100));
     text-transform: uppercase;
 }
     
@@ -93,6 +92,7 @@
     }
     
     .footer__nav {
+        font-size: var(--fs-100);
         grid-area: nav;
     }
     

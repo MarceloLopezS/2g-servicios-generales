@@ -5,6 +5,7 @@ import AboutUs from '../components/AboutUs/AboutUs';
 import Services from '../components/Services/Services';
 import Projects from '../components/Projects/Projects';
 import ContactUs from '../components/ContacUs/ContactUs';
+import Footer from '../components/Footer/Footer';
 
 const usePrimarySectionsOnScreen = () => {
     const navbarRef = useRef();
@@ -157,11 +158,7 @@ const App = () => {
                 <ContactUs reference={contactUsRef}/>
             </main>
             <footer>
-                {/* <LogoAndSocialLinks />
-                <FooterNav />
-                <Address />
-                <ContactInfo />
-                <Copyrights /> */}
+                <Footer />
             </footer>
         </React.StrictMode>
     );

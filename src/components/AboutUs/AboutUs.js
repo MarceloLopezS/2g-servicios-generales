@@ -54,6 +54,9 @@ const AboutUs = ({ reference }) => {
                         <div>
                             <p>02</p>
                         </div>
+                        <div>
+                            <p>03</p>
+                        </div>
                     </Carousel>
                 </div>
                 <div className='about-us__statistics-percentaje | fs-carousel-number fw-bold'>
@@ -64,6 +67,9 @@ const AboutUs = ({ reference }) => {
                         <div>
                             <p>60<span className='text-accent-400'>%</span></p>
                         </div>
+                        <div>
+                            <p>30<span className='text-accent-400'>%</span></p>
+                        </div>
                     </Carousel>
                 </div>
                 <div className='about-us__statistics-description | fs-carousel-description fw-light'>
@@ -73,6 +79,9 @@ const AboutUs = ({ reference }) => {
                         </div>
                         <div>
                             <p>De nuestros proyectos son levantamientos topográficos</p>
+                        </div>
+                        <div>
+                            <p>De nuestros proyectos son saneamientos físico legal de predios</p>
                         </div>
                     </Carousel>
                 </div>

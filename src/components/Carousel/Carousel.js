@@ -34,7 +34,7 @@ const useCarousel = () => {
         if(numberOfSlides > 2) {
             const lastSlide = slides[slides.length - 1];
             track.insertAdjacentElement('afterbegin', lastSlide);
-            track.style.transform = `translateX(-${100 / numberOfSlides}%)`;
+            track.style.transform = `translateY(-${100 / numberOfSlides}%)`;
         }
         carouselInterval = setInterval(() => {
             nextSlide(track, numberOfSlides);

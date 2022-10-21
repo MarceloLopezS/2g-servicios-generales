@@ -21,14 +21,28 @@ const usePrimarySectionsOnScreen = () => {
         const certificateLogo = navbar.querySelector('.navbar__certificate');
         const brand = navbar.querySelector('.navbar__brand');
         const navLinks = navbar.querySelectorAll('a');
-        let lastScrollTop;
+        let lastScrollTop, navbarTimeout;
         const screenOrientation = window.screen.orientation;
+        const setNavbarTimeout = () => {
+            clearTimeout(navbarTimeout);
+            navbarTimeout = setTimeout(() => {
+                navbar.setAttribute('data-slide','up');
+            }, 2000)
+        }
+        const onNavbarHoverIn = () => {
+            console.log('hover in');
+            clearTimeout(navbarTimeout);
+        }
         const scrollCallback = ()  => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
             if(currentScrollTop > lastScrollTop) {
                 navbar.setAttribute('data-slide','up');
+                clearTimeout(navbarTimeout);
             } else {
                 navbar.setAttribute('data-slide','down');
+                clearTimeout(navbarTimeout);
+                setNavbarTimeout();
+                navbar.addEventListener('mouseenter', onNavbarHoverIn);
             }
             lastScrollTop = currentScrollTop;
         }
@@ -62,6 +76,7 @@ const usePrimarySectionsOnScreen = () => {
                 }
                 navbar.removeAttribute('data-theme');
                 navbar.setAttribute('data-slide','down');
+                clearTimeout(navbarTimeout);
                 document.removeEventListener('scroll', scrollCallback);
             } else {
                 if (window.innerWidth >= 1008) {
@@ -85,6 +100,7 @@ const usePrimarySectionsOnScreen = () => {
         const homeObserver = new IntersectionObserver(navbarReact, homeOptions);
         const homeCurrentRef = homeRef.current;
         if(homeCurrentRef) homeObserver.observe(homeCurrentRef);
+        navbar.addEventListener('mouseleave', setNavbarTimeout);
         screenOrientation.addEventListener('change', orientationCallback);
 
         const sectionOptions = window.innerWidth >= 1008
@@ -110,10 +126,13 @@ const usePrimarySectionsOnScreen = () => {
         });
 
         return () => {
+            clearTimeout(navbarTimeout);
             observedSections.forEach(observed => {
                 if(observed.currentRef) observed.observer.unobserve(observed.currentRef);
             })
             if(homeCurrentRef) homeObserver.unobserve(homeCurrentRef);
+            navbar.removeEventListener('mouseenter', onNavbarHoverIn);
+            navbar.removeEventListener('mouseleave', setNavbarTimeout);
             document.removeEventListener('scroll', scrollCallback);
             screenOrientation.removeEventListener('change', orientationCallback);
         }

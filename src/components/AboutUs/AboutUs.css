@@ -8,7 +8,7 @@
 .about-us__text {
     position: relative;
     max-width: 45ch;
-    margin-block: var(--size-400);
+    margin-block: var(--size-450);
 }
 
 .about-us__text button {
@@ -36,7 +36,7 @@
 
 .about-us__text .complement {
     position: absolute;
-    font-size: clamp(var(--fs-100), 1.39vw, var(--fs-250));
+    padding-block: var(--size-100);
     top: 0;
     left: 0;
     opacity: 0;
@@ -66,7 +66,7 @@
 @media (min-width: 69em) {
     .about-us {
         grid-template-columns: auto max(36.5vw, 30rem);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50%);
     }
 
     .about-us__text {
@@ -123,7 +123,7 @@
     .about-us__statistics {
         display: grid;
         grid-template-columns: 7% 7% 7% 50% auto;
-        grid-template-rows: 25% 5% 30% 20% 20%;
+        grid-template-rows: 20% 5% 34% 21% 10%;
         grid-template-areas: 
             ". . . . ."
             ". indicator . percentaje percentaje"
@@ -156,7 +156,7 @@
         position: absolute;
         font-family: var(--ff-primary);
         font-weight: var(--fw-light);
-        content: '02';
+        content: '03';
         top: var(--size-100);
         left: var(--size-100);
     }

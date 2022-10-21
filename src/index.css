@@ -46,7 +46,7 @@
     --fs-800: 5rem;
     --fs-900: 8rem;
 
-    --fs-body: var(--fs-250);
+    --fs-body: clamp(var(--fs-100), 1.25vw, var(--fs-250));
     --fs-nav-links: var(--fs-250);
     --fs-banner-title: clamp(var(--fs-575), 5.5vw , var(--fs-800));
     --fs-section-title: var(--fs-350);
@@ -73,6 +73,7 @@
     --size-325: 3.5rem;
     --size-350: 5rem;
     --size-400: 6.25rem;
+    --size-450: 6.5rem;
     --size-500: 7.8rem;
     --size-600: 8.75rem;
     --size-700: 9.7rem;

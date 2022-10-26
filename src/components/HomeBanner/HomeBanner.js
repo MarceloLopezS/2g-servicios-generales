@@ -1,14 +1,20 @@
 import React from 'react';
 import './HomeBanner.css';
+import backgroundImage from '../../assets/images/home-image.jpeg';
 import videoPath from '../../assets/videos/banner-video.mp4';
 import logoPath from '../../assets/images/logo-banner.png';
 
 const HomeBanner = ({ reference }) => {
     return (
         <section id='home' className='banner' ref={reference}>
-            <video className='banner__video' autoPlay muted loop>
+            {
+                window.innerWidth > 1008 
+                ? (<video className='banner__media banner__video' autoPlay muted loop>
                 <source src={videoPath} type='video/mp4'></source>
-            </video>
+            </video>)
+                : (<img className='banner__media banner__bg-img' src={backgroundImage} alt='Background'>
+                </img>)
+            }
             <div className='banner__front container'>
                 <div className='banner__brand'>
                     <img src={logoPath} alt='2G Logo'></img>

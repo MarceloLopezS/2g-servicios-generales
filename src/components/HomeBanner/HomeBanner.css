@@ -9,13 +9,17 @@
     overflow: hidden;
 }
 
-.banner__video {
+.banner__media {
     min-width: 100%;
     min-height: 100%;
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+}
+
+.banner__bg-img {
+    object-fit: cover;
 }
 
 .banner__front {

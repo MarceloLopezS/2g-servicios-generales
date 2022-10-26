@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Enriqueta&display=swap');
 
 :root {
@@ -22,7 +22,7 @@
 
     --clr-shadow-900: hsla(0, 0%, 13%, 0.5);
 
-    --ff-primary: 'Eczar', serif;
+    --ff-primary: 'Work Sans', sans-serif;
     --ff-secondary: 'Enriqueta', serif;
 
     --fw-light: 400;
@@ -57,7 +57,7 @@
     --fs-btn: var(--fs-100);
     --fs-carousel-indicator: var(--fs-100);
     --fs-carousel-number: clamp(var(--fs-700), 7vw , var(--fs-900));
-    --fs-carousel-description: clamp(var(--fs-200), 1.2vw , var(--fs-350));
+    --fs-carousel-description: clamp(var(--fs-200), 1.2vw , var(--fs-300));
 
     --size-10: 0.15rem;
     --size-15: 0.35rem;
@@ -201,7 +201,6 @@ a:focus-visible {
 }
 
 ::placeholder {
-    font-family: var(--ff-primary);
     font-size: var(--fs-100);
     font-weight: var(--fw-light);
 }
@@ -298,7 +297,7 @@ a:focus-visible {
 
 .text-form-label {
     font-family: var(--ff-primary);
-    font-size: var(--fs-75);
+    font-size: var(--fs-100);
     font-weight: var(--fw-regular);
     text-transform: uppercase;
     color: var(--clr-primary-400);

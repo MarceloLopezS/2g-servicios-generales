@@ -53,7 +53,6 @@
     --fs-section-phrase:  clamp(var(--fs-575), 4.5vw , var(--fs-700));
     --fs-picture-info: var(--fs-100);
     --fs-project-title: var(--fs-600);
-    --fs-cta-title: var(--fs-650);
     --fs-btn: var(--fs-100);
     --fs-carousel-indicator: var(--fs-100);
     --fs-carousel-number: clamp(var(--fs-700), 7vw , var(--fs-900));
@@ -337,9 +336,6 @@ a:focus-visible {
 }
 .fs-project-title {
     font-size: var(--fs-project-title);
-}
-.fs-cta-title {
-    font-size: var(--fs-cta-title);
 }
 .fs-body {
     font-size: var(--fs-body);

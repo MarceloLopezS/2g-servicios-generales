@@ -1,6 +1,7 @@
 .navbar {
     position: fixed;
     font-size: var(--fs-nav-links);
+    font-weight: var(--fw-light);
     text-transform: uppercase;
     color: var(--clr-neutral-100);
     background-color: transparent;
@@ -93,7 +94,7 @@
 }
 
 .navbar__links li.active {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-regular);
 }
 
 .navbar__links li.active::after {

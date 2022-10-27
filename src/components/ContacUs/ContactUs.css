@@ -55,10 +55,27 @@
     padding-block: var(--size-75);
 }
 
+.contact-us__select-container.invalid span {
+    color: var(--clr-invalid);
+}
+
+.contact-us__select-container.invalid span::after {
+    border-top-color: var(--clr-invalid);
+}
+
 .contact-us__input-container {
     position: relative;
     border-bottom: 1px solid var(--clr-primary-400);
 }
+
+.contact-us__input-container.invalid {
+    border-bottom: 1px solid var(--clr-invalid);
+}
+
+.contact-us__input-container.invalid input::placeholder,  .contact-us__input-container.invalid textarea::placeholder{
+    color: var(--clr-invalid);
+}
+
 
 .contact-us__input-container::after {
     position: absolute;

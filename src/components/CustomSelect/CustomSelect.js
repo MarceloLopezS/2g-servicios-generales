@@ -175,7 +175,7 @@ const CustomSelect = ({ optionsArray }) => {
     const [ selectRef ] = useDropDown();
 
     return (
-        <select ref={selectRef}>
+        <select ref={selectRef} defaultValue={optionsArray[0]}>
             {
                 optionsArray.map((option, i) => {
                     return (

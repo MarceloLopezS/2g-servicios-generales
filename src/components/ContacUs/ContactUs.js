@@ -2,6 +2,68 @@ import React from 'react';
 import CustomSelect from '../CustomSelect/CustomSelect';
 import './ContactUs.css';
 
+const removeInvalidClass = (e) => {
+    if ([...e.target.parentElement.classList].includes('invalid')) {
+        e.target.parentElement.classList.remove('invalid');
+    } else if ([...e.target.parentElement.parentElement.classList].includes('invalid')) {
+        e.target.parentElement.parentElement.classList.remove('invalid');
+    }
+}
+
+const onFormSubmit = (e) => {
+    e.preventDefault();
+    const serviceOfInterest = e.target.querySelector('select');
+    const clientName = e.target.querySelector('input[name="contact-us__name"]');
+    const email = e.target.querySelector('input[name="contact-us__email"]');
+    const company = e.target.querySelector('input[name="contact-us__company"]');
+    const city = e.target.querySelector('input[name="contact-us__city"]');
+    const message = e.target.querySelector('textarea[name="contact-us__message"]')
+    const inputs = [serviceOfInterest, clientName, email, company, city, message];
+    let validForm = true;
+
+    if (serviceOfInterest.value === '-') {
+        validForm = false;
+        serviceOfInterest.parentElement.classList.add('invalid');
+    }
+    inputs.forEach(input => {
+        if (!input.value) {
+            validForm = false;
+            input.parentElement.classList.add('invalid');
+        }
+    });
+
+    if(email.value) {
+        const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.value.match(regex)) {
+            validForm = false;
+            email.parentElement.classList.add('invalid');
+            email.setAttribute('placeholder', 'Por favor inserta un correo válido');
+            email.value = '';
+        }
+    }
+
+    if(validForm) {
+        const formData = {
+            serviceOfInterest: serviceOfInterest.value,
+            clientName: clientName.value,
+            email: email.value,
+            company: company.value,
+            city: city.value,
+            message: message.value
+        };
+        fetch("http://localhost:3001", {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(data => console.log(data));
+    }
+}
+
 const ContactUs = ({ reference }) => {
     return (
         <section id='contact-us' className='contact-us' ref={reference}>
@@ -25,10 +87,10 @@ const ContactUs = ({ reference }) => {
             </section>
             <section className='contact-us__form-container container'>
                 <p className='contact-us__info-title'>Envíanos un mensaje:</p>
-                <form className='contact-us__form'>
+                <form className='contact-us__form' onSubmit={onFormSubmit}>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__service'>Selecciona un servicio de interés</label>
-                        <div className='contact-us__select-container'>
+                        <div className='contact-us__select-container' onClick={removeInvalidClass}>
                             <CustomSelect optionsArray={[
                                 '-',
                                 'Construcción',
@@ -37,40 +99,40 @@ const ContactUs = ({ reference }) => {
                                 'Saneamiento físico legal de predios',
                                 'Sistemas de bombeo',
                                 'Sistemas de drenaje'
-                            ]}/>
+                            ]} />
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__name'>Nombre completo</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__name' name='contact-us__name' type='text' placeholder='Por favor escribe tu nombre completo'></input>
+                            <input id='contact-us__name' name='contact-us__name' type='text' placeholder='Por favor escribe tu nombre completo' onFocus={removeInvalidClass}></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__email'>Email</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__email' name='contact-us__email' type='email' placeholder='Por favor escribe tu dirección de correo electrónico'></input>
+                            <input id='contact-us__email' name='contact-us__email' type='email' placeholder='Por favor escribe tu dirección de correo electrónico' onFocus={removeInvalidClass}></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
-                        <label className='contact-us__form-label text-form-label' htmlFor='contact-us__company-name'>Empresa</label>
+                        <label className='contact-us__form-label text-form-label' htmlFor='contact-us__company'>Empresa</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__company-name' name='contact-us__company-name' type='text' placeholder='Por favor escribe el nombre de tu empresa'></input>
+                            <input id='contact-us__company' name='contact-us__company' type='text' placeholder='Por favor escribe el nombre de tu empresa' onFocus={removeInvalidClass}></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__city'>Ciudad</label>
                         <div className='contact-us__input-container'>
-                            <input id='contact-us__city' name='contact-us__city' type='text' placeholder='Por favor escribe la ciudad donde te ubicas'></input>
+                            <input id='contact-us__city' name='contact-us__city' type='text' placeholder='Por favor escribe la ciudad donde te ubicas' onFocus={removeInvalidClass}></input>
                         </div>
                     </div>
                     <div className='contact-us__form-group'>
                         <label className='contact-us__form-label text-form-label' htmlFor='contact-us__message'>Mensaje</label>
                         <div className='contact-us__input-container'>
-                            <textarea id='contact-us__message' name='contact-us__message' placeholder='Por favor escribe tu mensaje' ></textarea>
+                            <textarea id='contact-us__message' name='contact-us__message' placeholder='Por favor escribe tu mensaje' onFocus={removeInvalidClass}></textarea>
                         </div>
                     </div>
-                    <button type='button' className='btn' data-bg='primary'>Enviar</button>
+                    <button type='submit' className='btn' data-bg='primary'>Enviar</button>
                 </form>
             </section>
         </section>

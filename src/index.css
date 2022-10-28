@@ -49,7 +49,7 @@
     --fs-900: 8rem;
 
     --fs-body: clamp(var(--fs-200), 1.25vw, var(--fs-250));
-    --fs-placeholder: clamp(var(--fs-100), 1vw ,var(--fs-200));
+    --fs-input: clamp(var(--fs-100), 1vw ,var(--fs-200));
     --fs-nav-links: var(--fs-250);
     --fs-banner-title: clamp(var(--fs-575), 5.5vw , var(--fs-800));
     --fs-section-title: var(--fs-350);
@@ -169,6 +169,7 @@ label, input {
 }
 
 input, textarea {
+    font-size: var(--fs-input);
     width: 100%;
     border: 0;
     outline: 0;
@@ -204,7 +205,6 @@ a:focus-visible {
 }
 
 ::placeholder {
-    font-size: var(--fs-placeholder);
     font-weight: var(--fw-extra-light);
 }
 
@@ -237,7 +237,13 @@ a:focus-visible {
     overflow: hidden;
 }
 
-.btn::after {
+.btn:disabled {
+    cursor: default;
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-accent-400);
+}
+
+.btn:not(:disabled):after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -251,22 +257,22 @@ a:focus-visible {
     transition-timing-function: ease-out;
 }
 
-.btn[data-bg='primary'] {
+.btn:not(:disabled)[data-bg='primary'] {
     color: var(--clr-neutral-100);
     background-color: var(--clr-primary-400);
 }
 
-.btn[data-bg='primary']::after {
+.btn:not(:disabled)[data-bg='primary']::after {
     background-color: var(--clr-accent-100);
 }
 
 @media (hover:hover) {
-    .btn[data-bg='primary']:hover, .btn[data-bg='primary']:focus-visible {
+    .btn:not(:disabled)[data-bg='primary']:hover, .btn[data-bg='primary']:focus-visible {
         color: var(--clr-primary-400);
         outline: 0;
     }
     
-    .btn[data-bg='primary']:hover::after, .btn[data-bg='primary']:focus-visible::after {
+    .btn:not(:disabled)[data-bg='primary']:hover::after, .btn[data-bg='primary']:focus-visible::after {
         inset: 0;
     }
 }

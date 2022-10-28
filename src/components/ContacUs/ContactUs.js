@@ -19,8 +19,12 @@ const onFormSubmit = (e) => {
     const city = e.target.querySelector('input[name="contact-us__city"]');
     const message = e.target.querySelector('textarea[name="contact-us__message"]')
     const inputs = [serviceOfInterest, clientName, email, company, city, message];
+    const messageContainer = e.target.querySelector('.server-response');
     let validForm = true;
 
+    messageContainer.textContent = '';
+    messageContainer.removeAttribute('data-success');
+    messageContainer.removeAttribute('data-danger');
     if (serviceOfInterest.value === '-') {
         validForm = false;
         serviceOfInterest.parentElement.classList.add('invalid');
@@ -43,6 +47,10 @@ const onFormSubmit = (e) => {
     }
 
     if(validForm) {
+        const loader = e.target.querySelector('.loader');
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        loader.setAttribute('data-show', '');
+        submitButton.disabled = true;
         const formData = {
             serviceOfInterest: serviceOfInterest.value,
             clientName: clientName.value,
@@ -59,8 +67,29 @@ const onFormSubmit = (e) => {
             }
         })
         .then(res => res.json())
-        .catch(error => console.error('Error:', error))
-        .then(data => console.log(data));
+        .catch(error => {
+            loader.removeAttribute('data-show');
+            console.error(`Fetch error: ${error}`);
+            messageContainer.textContent = 'Hubo un inconveniente al procesar la solicitud. Por favor, intente nuevamente.';
+            messageContainer.setAttribute('data-danger', '');
+            submitButton.disabled = false;
+        })
+        .then(data => {
+            loader.removeAttribute('data-show');
+            const { success, message } = data;
+            const messageContainer = e.target.querySelector('.server-response');
+
+            messageContainer.textContent = message;
+            if(success === 'true') {
+                messageContainer.removeAttribute('data-danger');
+                messageContainer.setAttribute('data-success', '');
+                submitButton.disabled = true;
+            } else if (success == 'false') {
+                messageContainer.removeAttribute('data-success');
+                messageContainer.setAttribute('data-danger', '');
+                submitButton.disabled = false;
+            }
+        });
     }
 }
 
@@ -132,7 +161,13 @@ const ContactUs = ({ reference }) => {
                             <textarea id='contact-us__message' name='contact-us__message' placeholder='Por favor escribe tu mensaje' onFocus={removeInvalidClass}></textarea>
                         </div>
                     </div>
-                    <button type='submit' className='btn' data-bg='primary'>Enviar</button>
+                    <div className='contact-us__action-response'>
+                        <button type='submit' className='btn' data-bg='primary'>Enviar</button>
+                        <div className='response'>
+                            <span className='loader'></span>
+                            <div className='server-response'></div>
+                        </div>
+                    </div>
                 </form>
             </section>
         </section>

@@ -84,7 +84,7 @@ const onFormSubmit = (e) => {
                 messageContainer.removeAttribute('data-danger');
                 messageContainer.setAttribute('data-success', '');
                 submitButton.disabled = true;
-            } else if (success == 'false') {
+            } else if (success === 'false') {
                 messageContainer.removeAttribute('data-success');
                 messageContainer.setAttribute('data-danger', '');
                 submitButton.disabled = false;

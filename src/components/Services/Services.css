@@ -174,7 +174,7 @@
     }
 
     .card[data-section='services'] .card__body {
-        transform: translateY(54.5%);
+        transform: translateY(54.75%);
         transition: transform 500ms ease;
     }
     

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Enriqueta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700;800&display=swap');
 
 :root {
     --clr-primary-300: hsl(212, 47%, 45%);
@@ -25,9 +24,10 @@
     --clr-shadow-900: hsla(0, 0%, 13%, 0.5);
 
     --ff-primary: 'Inter Tight', sans-serif;
-    --ff-secondary: 'Enriqueta', serif;
+    --ff-secondary: 'Inter Tight', sans-serif;
 
-    --fw-light: 500;
+    --fw-extra-light: 300;
+    --fw-light: 400;
     --fw-regular: 700;
     --fw-bold: 800;
 
@@ -49,6 +49,7 @@
     --fs-900: 8rem;
 
     --fs-body: clamp(var(--fs-200), 1.25vw, var(--fs-250));
+    --fs-placeholder: clamp(var(--fs-100), 1vw ,var(--fs-200));
     --fs-nav-links: var(--fs-250);
     --fs-banner-title: clamp(var(--fs-575), 5.5vw , var(--fs-800));
     --fs-section-title: var(--fs-350);
@@ -153,6 +154,7 @@ picture {
 body {
     font-family: var(--ff-secondary);
     font-size: var(--fs-body);
+    font-weight: var(--fw-extra-light);
     color: var(--clr-neutral-900);
 }
 
@@ -202,14 +204,8 @@ a:focus-visible {
 }
 
 ::placeholder {
-    font-size: var(--fs-100);
-    font-weight: var(--fw-light);
-}
-
-@media (min-width: 63em) {
-    ::placeholder {
-        font-size: var(--fs-200);
-    }
+    font-size: var(--fs-placeholder);
+    font-weight: var(--fw-extra-light);
 }
 
 #root {

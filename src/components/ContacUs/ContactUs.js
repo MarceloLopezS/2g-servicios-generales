@@ -67,14 +67,8 @@ const onFormSubmit = (e) => {
             }
         })
         .then(res => res.json())
-        .catch(error => {
-            loader.removeAttribute('data-show');
-            console.error(`Fetch error: ${error}`);
-            messageContainer.textContent = 'Hubo un inconveniente al procesar la solicitud. Por favor, intente nuevamente.';
-            messageContainer.setAttribute('data-danger', '');
-            submitButton.disabled = false;
-        })
         .then(data => {
+            if(!data) return;
             loader.removeAttribute('data-show');
             const { success, message } = data;
             const messageContainer = e.target.querySelector('.server-response');
@@ -89,6 +83,13 @@ const onFormSubmit = (e) => {
                 messageContainer.setAttribute('data-danger', '');
                 submitButton.disabled = false;
             }
+        })
+        .catch(error => {
+            loader.removeAttribute('data-show');
+            console.error(`Fetch error: ${error}`);
+            messageContainer.textContent = 'Hubo un inconveniente al procesar la solicitud. Por favor, intente nuevamente.';
+            messageContainer.setAttribute('data-danger', '');
+            submitButton.disabled = false;
         });
     }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.css';
-import projectImg1 from '../../assets/images/remodelacion-hotel-costa-del-sol.jpeg';
-import projectImg2 from '../../assets/images/proyecto-inmobiliario.jpeg';
-import projectImg3 from '../../assets/images/estacion-meteorologica.jpeg';
-import projectImg4 from '../../assets/images/diseño-sistema-rebombeo.jpeg';
+import projectImg1 from '../../assets/images/remodelacion-hotel-costa-del-sol.webp';
+import projectImg2 from '../../assets/images/proyecto-inmobiliario.webp';
+import projectImg3 from '../../assets/images/estacion-meteorologica.webp';
+import projectImg4 from '../../assets/images/diseño-sistema-rebombeo.webp';
 
 const Projects = ({ reference }) => {
     const toggleComplementText = (event) => {

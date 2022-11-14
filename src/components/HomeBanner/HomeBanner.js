@@ -1,8 +1,8 @@
 import React from 'react';
 import './HomeBanner.css';
-import backgroundImage from '../../assets/images/home-image.jpeg';
+import backgroundImage from '../../assets/images/home-image.webp';
 import videoPath from '../../assets/videos/banner-video.mp4';
-import logoPath from '../../assets/images/logo-banner.png';
+import logoPath from '../../assets/images/logo-banner.webp';
 
 const HomeBanner = ({ reference }) => {
     return (

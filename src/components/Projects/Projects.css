@@ -1,7 +1,7 @@
 .projects {
     position: relative;
     display: grid;
-    background-image: url(../../assets/images/projects-background.jpg);
+    background-image: url(../../assets/images/projects-background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: center;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
-import brandLogo from '../../assets/images/logo.png';
-import certificateLogo from '../../assets/images/logo-camara-comercio.png';
+import brandLogo from '../../assets/images/logo.webp';
+import certificateLogo from '../../assets/images/logo-camara-comercio.webp';
 
 const menuToggle = () => {
     if (window.innerWidth < 1008) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Services.css';
-import serviceImg1 from '../../assets/images/levantamiento-topografico.jpeg';
-import serviceImg2 from '../../assets/images/movimiento-tierras.jpg';
-import serviceImg3 from '../../assets/images/saneamiento-fisico-legal-predios.jpg';
-import serviceImg4 from '../../assets/images/sistemas-drenaje.jpg';
-import serviceImg5 from '../../assets/images/evaluacion-sistemas-bombeo.jpg';
-import serviceImg6 from '../../assets/images/construccion-civil.jpg';
+import serviceImg1 from '../../assets/images/levantamiento-topografico.webp';
+import serviceImg2 from '../../assets/images/movimiento-tierras.webp';
+import serviceImg3 from '../../assets/images/saneamiento-fisico-legal-predios.webp';
+import serviceImg4 from '../../assets/images/sistemas-drenaje.webp';
+import serviceImg5 from '../../assets/images/evaluacion-sistemas-bombeo.webp';
+import serviceImg6 from '../../assets/images/construccion-civil.webp';
 
 const Services = ({ reference }) => {
     return (

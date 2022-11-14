@@ -128,6 +128,10 @@
         position: static;
         background-color: inherit;
     }
+
+    .navbar__certificate {
+        opacity: 0;
+    }
     
     .navbar__mobile-menu-toggle {
         display: block;

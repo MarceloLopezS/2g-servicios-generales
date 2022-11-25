@@ -6,7 +6,7 @@
     background-color: var(--clr-accent-800);
     color: var(--clr-accent-100);
     padding-inline: var(--size-300) var(--size-400);
-    padding-block: min(7.1vw, var(--size-600)) min(5vw, var(--size-400));
+    padding-block: min(6vw, var(--size-600)) min(4vw, var(--size-400));
     margin-top: min(7vw, var(--size-575));
 }
 

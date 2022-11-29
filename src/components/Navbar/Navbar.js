@@ -23,7 +23,7 @@ const Navbar = ({ reference }) => {
     return (
         <div className='navbar' ref={reference}>
             <div className='container navbar__container'>
-                <img className='navbar__certificate' src={certificateLogo} alt='Logo Cámara de Comercio y Producción'></img>
+                <img className='navbar__certificate' src={certificateLogo} alt='Logo Cámara de Comercio y Producción Cajamarca'></img>
                 <img className='navbar__brand' src={brandLogo} alt='2G Logo'></img>
                 <button className='navbar__mobile-menu-toggle' aria-controls='navbar__primary-navigation' aria-expanded='false' onClick={menuToggle}>
                     <svg className='navbar__icon' id='navbar__drop' data-visible xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">

@@ -12,7 +12,7 @@ const HomeBanner = ({ reference }) => {
                 ? (<video className='banner__media banner__video' autoPlay muted loop>
                 <source src={videoPath} type='video/mp4'></source>
             </video>)
-                : (<img className='banner__media banner__bg-img' src={backgroundImage} alt='Background'>
+                : (<img className='banner__media banner__bg-img' src={backgroundImage} alt='Paisaje de la ciudad de Cajamarca'>
                 </img>)
             }
             <div className='banner__front container'>
@@ -21,7 +21,7 @@ const HomeBanner = ({ reference }) => {
                 </div>
                 <div className='banner__body'>
                     <h1 className='highlighted fs-banner-title text-primary-400 padding-block-100'>Diseño <span className='text-accent-100'>&</span> Construcción</h1>
-                    <p>Somos una empresa con una década de experiencia en materializar los proyectos de nuestros clientes siguiendo los más altos estándares de calidad, seguridad y medio ambiente.</p>
+                    <p>Somos una empresa peruana con una década de experiencia en materializar los proyectos de nuestros clientes, siguiendo los más altos estándares de calidad, seguridad y medio ambiente.</p>
                 </div>
                 <div className='banner__scroll-wraper | padding-top-200'>
                     <div className='banner__scroll-icon-rail'>

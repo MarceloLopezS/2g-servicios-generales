@@ -64,7 +64,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Sistemas de bombeo</h3>
-                        <p>Realizamos instalación, mantenimiento y reparación de todo tipo de bombas y tableros.</p>
+                        <p>Realizamos evaluación, instalación y mantenimiento de sistemas completos de bombeo de agua en tajos abiertos y subterráneos.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>

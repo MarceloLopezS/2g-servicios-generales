@@ -177,6 +177,14 @@
         transform: translateY(54.75%);
         transition: transform 500ms ease;
     }
+
+    .card[data-section='services']:nth-child(5) .card__body {
+        transform: translateY(60.5%);
+    }
+
+    .card[data-section='services']:nth-child(6) .card__body {
+        transform: translateY(49.75%);
+    }
     
     .card[data-section='services']:hover .card__body {
         transform: translateY(0%);

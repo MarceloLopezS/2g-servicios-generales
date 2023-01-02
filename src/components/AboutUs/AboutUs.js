@@ -23,17 +23,17 @@ const AboutUs = ({ reference }) => {
                         <span className='highlighted text-accent-400'>Conocemos lo que hacemos.</span> Ejecutamos proyectos de construcción e ingeniería sostenibles, utilizando las mejores tecnologías para garantizar la satisfacción y confiabilidad de nuestros clientes.
                     </p>
                     <p className='text-align-justify'>
-                        Buscamos la manera de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto,</span> cumpliendo con los estándares de Calidad, Seguridad y Medio Ambiente.
+                        Buscamos la mejor forma de garantizar el <span className='highlighted text-accent-400'>éxito de cada proyecto,</span> cumpliendo con los estándares de Calidad, Seguridad y Medio Ambiente.
                     </p>
                     <button type='button' className='btn' data-bg='primary' onClick={toggleComplementText}>Más sobre nosotros</button>
                 </div>
                 <div className='text-slide complement | text-align-justify'>
                     <h3 className='highlighted text-primary-400'>Nosotros</h3>
-                    <p>Somos <span className='ff-primary'>2G SERVICIOS GENERALES S.R.L</span>, una empresa dedicada a la ejecución de proyectos de construcción e ingeniería con más de diez años de experiencia en: sistemas de rebombeo, levantamientos topográficos, saneamiento físico legal de predios, movimiento de tierras, sistemas de drenaje, trabajo en interiores y exteriores de edificaciones, cerco perimétrico y alquiler de maquinaria liviana para minería.</p>
+                    <p><span className='ff-primary'>2G SERVICIOS GENERALES S.R.L</span> es una empresa dedicada a la ejecución de proyectos de construcción e ingeniería con más de diez años de experiencia en: levantamientos topográficos, movimiento de tierras, saneamiento físico legal de predios, construcción y mantenimiento en interiores y exteriores de edificaciones, trabajos de arco eléctrico y oxicorte, alquiler de maquinaria liviana para construcción y minería, sistemas de rebombeo de aguas superficiales.</p>
                     <h3 className='highlighted text-primary-400'>Nuestra visión</h3>
-                    <p>Ser reconocidos a nivel nacional como una empresa líder, sólida e innovadora en el sector construcción, brindando servicios que satisfacen íntegramente las expectativas de nuestros clientes, basándose en altos estándares de calidad, seguridad y cuidado del medio ambiente.</p>
+                    <p>Ser reconocidos a nivel nacional como una empresa líder, sólida e innovadora en los sectores construcción y minería, brindando servicios que satisfacen íntegramente las expectativas de nuestros clientes, basándose en altos estándares de calidad, seguridad y cuidado del medio ambiente.</p>
                     <h3 className='highlighted text-primary-400'>Nuestra misión</h3>
-                    <p>Contribuir al éxito de nuestros clientes, desarrollando cada uno de sus proyectos con calidad, seguridad, y cuidado del medio ambiente; siempre cumpliendo con los plazos y presupuestos previstos.</p>
+                    <p>Contribuir al éxito de nuestros clientes, desarrollando cada uno de sus proyectos con calidad, seguridad, cuidado del medio ambiente y asumiendo responsabilidad social.</p>
                     <button className='btn btn-back' data-bg='primary' onClick={toggleComplementText}>
                         Volver
                     </button>
@@ -41,7 +41,7 @@ const AboutUs = ({ reference }) => {
             </section>
             <section className='about-us__main-picture'>
                 <div className='ff-primary text-neutral-100 fs-picture-info'>
-                    <p className='fw-regular padding-block-100'>Contratistas Generales</p>
+                    <p className='fw-regular padding-bottom-100'>Contratistas Generales</p>
                     <p className='fw-light'>Diseño y construcción</p>
                 </div>
             </section>

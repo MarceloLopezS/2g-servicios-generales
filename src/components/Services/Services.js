@@ -55,7 +55,7 @@ const Services = ({ reference }) => {
                     </div>
                     <div className='card__body'>
                         <h3>Sistemas de drenaje</h3>
-                        <p>Diseñamos e instalamos sistemas de drenaje y ventilación, con calidad garantizada.</p>
+                        <p>Diseñamos e instalamos sistemas de drenaje y almacenamiento con calidad garantizada.</p>
                     </div>
                 </div>
                 <div className='card' data-section='services'>

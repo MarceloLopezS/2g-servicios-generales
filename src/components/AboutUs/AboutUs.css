@@ -63,6 +63,12 @@
     display: none;
 }
 
+@media (max-width: 69em) {
+    .about-us__text .complement {
+        top: -9%;
+    }
+}
+
 @media (min-width: 69em) {
     .about-us {
         grid-template-columns: auto max(36.5vw, 30rem);

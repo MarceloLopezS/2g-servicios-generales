@@ -107,11 +107,11 @@ const ContactUs = ({ reference }) => {
                 <div className='contact-us__info'>
                     <p className='contact-us__info-title'>Teléfonos:</p>
                     <p>+51 966 869 663</p>
+                    <p>+51 940 221 260</p>
                     <p>+51 924 674 701</p>
                 </div>
                 <div className='contact-us__info'>
-                    <p className='contact-us__info-title'>Correos:</p>
-                    <p>gerencia@2gserviciosgenerales.com</p>
+                    <p className='contact-us__info-title'>Correo:</p>
                     <p>consultas@2gserviciosgenerales.com</p>
                 </div>
             </section>

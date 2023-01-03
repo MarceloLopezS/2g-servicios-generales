@@ -24,7 +24,7 @@ const Projects = ({ reference }) => {
                 </div>
                 <div className='text-neutral-100 text-align-justify'>
                     <p>
-                        En <span className='highlighted text-accent-400'>2G</span>, estamos comprometidos con dar las mejores soluciones; generando confianza y fidelidad en nuestros clientes.
+                        En <span className='highlighted text-accent-400'>2G Servicios Generales</span>, estamos comprometidos con dar las mejores soluciones; generando confianza y fidelidad en nuestros clientes.
                     </p>
                     <p className='padding-top-150'>
                         Contamos con un equipo profesional altamente calificado y especializado para cada servicio que, 

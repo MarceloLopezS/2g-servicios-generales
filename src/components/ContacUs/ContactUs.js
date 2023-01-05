@@ -59,7 +59,7 @@ const onFormSubmit = (e) => {
             city: city.value,
             message: message.value
         };
-        fetch("http://localhost:3001", {
+        fetch("https://twog-main-page-back-end.onrender.com", {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {
@@ -87,7 +87,7 @@ const onFormSubmit = (e) => {
         .catch(error => {
             loader.removeAttribute('data-show');
             console.error(`Fetch error: ${error}`);
-            messageContainer.textContent = 'Hubo un inconveniente al procesar la solicitud. Por favor, intente nuevamente.';
+            messageContainer.textContent = 'Hubo un inconveniente al procesar la solicitud. Por favor, vuelva a intentar en unos momentos.';
             messageContainer.setAttribute('data-danger', '');
             submitButton.disabled = false;
         });

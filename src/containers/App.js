@@ -102,7 +102,11 @@ const usePrimarySectionsOnScreen = () => {
         const homeObserver = new IntersectionObserver(navbarReact, homeOptions);
         const homeCurrentRef = homeRef.current;
         if(homeCurrentRef) homeObserver.observe(homeCurrentRef);
-        screenOrientation.addEventListener('change', orientationCallback);
+        if (!screenOrientation) { // For Safari
+            window.addEventListener('onorientationchange', orientationCallback);
+        } else {
+            screenOrientation.addEventListener('change', orientationCallback);
+        }
 
         const sectionOptions = window.innerWidth >= 1008
         ? {
@@ -135,7 +139,11 @@ const usePrimarySectionsOnScreen = () => {
             navbar.removeEventListener('mouseenter', onNavbarHoverIn);
             navbar.removeEventListener('mouseleave', setNavbarTimeout);
             document.removeEventListener('scroll', scrollCallback);
-            screenOrientation.removeEventListener('change', orientationCallback);
+            if (!screenOrientation) { // For Safari
+                window.removeEventListener('orientationchange', orientationCallback);
+            } else {
+                screenOrientation.removeEventListener('change', orientationCallback);
+            }
         }
     }, [navbarRef, sectionsArray, orientationChange]);
 
